@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delitiāre — Men’s Spa</title>
+  <meta name="description" content="Delitiāre Men’s Spa: Delicia para los sentidos. Rituales premium de relajación para hombres en CDMX." />
+  <meta accesskey=""
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --charcoal:#0E0F12; /* fondo premium */
+      --champagne:#D6B86A; /* dorado suave */
+      --ivory:#F6F3EE;      /* marfil */      --sage:#2A3A34;       /* verde profundo */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;scroll-behavior:smooth}
+    body{margin:0;background:var(--charcoal);color:var(--ivory);font-family:"Manrope",system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    .font-display{font-family:"Cormorant Garamond",serif}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Utilidades */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:12px;border:1px solid rgba(214,184,106,.5);color:var(--ivory);text-decoration:none}
+    .btn:hover{background:rgba(214,184,106,.08)}
+    .btn-solid{background:var(--champagne);color:#221b0d;border-color:transparent}
+    .btn-solid:hover{filter:brightness(.96)}
+    .gold{color:var(--champagne)}
+    .gold-gradient{background:linear-gradient(145deg,#E8D6A0,#B6934E);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .card{border:1px solid rgba(214,184,106,.35);border-radius:22px;background:linear-gradient(180deg,rgba(214,184,106,.06),rgba(214,184,106,.02));box-shadow:0 16px 50px rgba(0,0,0,.35)}
+    .section{padding:96px 0;scroll-margin-top:96px}
+
+    /* Header / Nav */
+    header{position:fixed;inset:0 auto auto 0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(0,0,0,.18);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(214,184,106,.45)}
+    .brand .title{line-height:1}
+    .brand .title .name{font-family:"Cormorant Garamond",serif;font-size:22px;letter-spacing:.06em}
+    .brand .title .tag{font-size:11px;letter-spacing:.25em;opacity:.8;text-transform:uppercase}
+    nav .links{display:none;gap:8px}
+    .hamb{width:42px;height:42px;border-radius:12px;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;background:transparent}
+    .hamb svg{width:22px;height:22px}
+    @media(min-width:900px){
+      nav .links{display:flex}
+      .hamb{display:none}
+    }
+    .drawer{display:none}
+    .drawer.open{display:block;background:rgba(14,15,18,.95);border-top:1px solid rgba(255,255,255,.08)}
+    .drawer a,.drawer button{display:block;width:100%;text-align:left;padding:12px 8px;color:var(--ivory);background:transparent;border:0}
+    .drawer a:hover,.drawer button:hover{background:rgba(255,255,255,.06)}
+
+    /* Hero */
+    .hero{min-height:100svh;display:flex;align-items:center;background:
+      radial-gradient(60% 60% at 50% 0%, rgba(214,184,106,.20), transparent 60%),
+      radial-gradient(60% 60% at 100% 0%, rgba(42,58,52,.18), transparent 60%),
+      linear-gradient(180deg,#0E0F12,#0B0C0E);
+      padding-top:96px
+    }
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:32px}
+    @media(min-width:940px){.hero-grid{grid-template-columns:7fr 5fr;gap:48px}}
+    .panel{border-radius:24px;overflow:hidden}
+    .panel-inner{display:grid;place-items:center;min-height:420px;background:linear-gradient(180deg,rgba(42,58,52,.85),rgba(14,15,18,.92))}
+
+    /* Grid cards */
+    .grid{display:grid;gap:20px}
+    .grid.cols-3{grid-template-columns:1fr}
+    @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .grid.cols-4{grid-template-columns:1fr 1fr}
+    @media(min-width:1200px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:36px 0}
+
+    /* Modales */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;place-items:center;padding:16px;z-index:60}
+    .modal.open{display:grid}
+    .modal .box{max-width:720px;width:100%}
+
+    /* Toast */
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:rgba(0,0,0,.7);border:1px solid rgba(214,184,106,.5);padding:10px 14px;border-radius:12px;z-index:70}
+
+    /* Links */
+    a.inline{color:var(--ivory);opacity:.85}
+    a.inline:hover{color:var(--champagne)}
+    /* ===== Carousel header (fullscreen) ===== */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:96px;overflow:hidden;background:none !important}
+  .carousel{position:absolute;inset:0;z-index:0}
+  .slides{height:100%;display:flex;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .slide{min-width:100%;height:100%;position:relative}
+  .slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .overlay-grad{position:absolute;inset:0;background:
+    radial-gradient(60% 60% at 50% 0%, rgba(214,184,106,.20), transparent 60%),
+    linear-gradient(180deg, rgba(14,15,18,.35) 0%, rgba(14,15,18,.75) 50%, rgba(14,15,18,.95) 100%)}
+  .overlay-content{position:relative;z-index:1}
+  .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:1px solid rgba(214,184,106,.45);color:var(--ivory);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;backdrop-filter: blur(2px);z-index:2}
+  .ctrl:hover{background:rgba(0,0,0,.5)}
+  .ctrl.prev{left:14px}
+  .ctrl.next{right:14px}
+  .dots{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;display:flex;gap:8px;z-index:2}
+  .dots button{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.45);border:1px solid rgba(214,184,106,.5);padding:0}
+  .dots button[aria-current="true"]{background:var(--champagne)}
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Delitiāre inicio">
+        <span class="mark" aria-hidden="true">
+          <!-- Monograma D con hoja -->
+          <svg viewBox="0 0 86 86" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gold" x1="0" y1="0" x2="86" y2="86"><stop stop-color="#E8D6A0"/><stop offset="1" stop-color="#B6934E"/></linearGradient>
+            </defs>
+            <circle cx="43" cy="43" r="38" stroke="url(#gold)" stroke-width="1.5" fill="none" opacity=".6"/>
+            <path d="M26 18 h16 q24 0 24 25 t-24 25 H26 Z m10 8 v34 h6 q16 0 16-17.1T42 26 Z" stroke="url(#gold)" stroke-width="2" fill="none"/>
+            <path d="M44 28 C58 32,60 46,46 54 C40 58,34 58,30 57 C40 56,48 50,44 28 Z" fill="url(#gold)" opacity=".45"/>
+          </svg>
+        </span>
+        <span class="title">
+          <span class="name">Delitiāre</span><br>
+          <span class="tag">MEN’S SPA</span>
+        </span>
+      </a>
+
+      <nav>
+        <div class="links">
+          <a class="btn" href="#rituales">Rituales</a>
+          <a class="btn" href="#instalaciones">Instalaciones</a>
+          <a class="btn" href="#membresias">Membresías</a>
+          <a class="btn" href="#experiencia">Experiencia</a>
+          <a class="btn" href="#contacto">Contacto</a>
+          <a class="btn btn-solid" href="#contacto">Reservar</a>
+        </div>
+        <button class="hamb" id="hamb" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
+      <div class="container" style="padding:10px 20px 18px">
+        <a href="#rituales">Rituales</a>
+        <a href="#instalaciones">Instalaciones</a>
+        <a href="#membresias">Membresías</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn" href="#contacto" style="margin-top:6px">Reservar</a>
+        <div style="display:flex;gap:16px;margin-top:10px;opacity:.85">
+          <button id="open-privacy" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+          <button id="open-terms" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+  <!-- Fullscreen image carousel background -->
+  <div id="carousel" class="carousel" aria-label="Galería de imágenes">
+    <div id="slides" class="slides" style="transform:translateX(0%)">
+      <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" /></div>
+      <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" /></div>
+      <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" /></div>
+    </div>
+    <div class="overlay-grad" aria-hidden="true"></div>
+    <button id="prev" class="ctrl prev" aria-label="Anterior" title="Anterior">&#10094;</button>
+    <button id="next" class="ctrl next" aria-label="Siguiente" title="Siguiente">&#10095;</button>
+    <div id="dots" class="dots" role="tablist" aria-label="Paginación"></div>
+  </div>
+
+  <!-- Original content preserved on top -->
+  <div class="container hero-grid overlay-content">
+    <div class="reveal show">
+      <h1 class="font-display" style="font-size: clamp(40px, 6vw, 78px); line-height:1.05; margin: 0 0 12px 0;">
+        <span class="gold-gradient">Delitiāre</span>
+        <span style="display:block;color:rgba(255,255,255,.9)">Delicia para los sentidos</span>
+      </h1>
+      <p style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px">Un santuario masculino donde el lujo es silencioso: rituales de relajación profunda, tacto experto y detalles dorados que encienden los sentidos.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-solid" href="#rituales">Ver rituales</a>
+        <a class="btn" href="#contacto">Reservar ahora</a>
+      </div>
+    </div>
+    <div class="panel card reveal">
+      <div class="panel-inner">
+        <div style="text-align:center; padding:32px">
+          <div style="width:68px;height:68px;border-radius:50%;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;margin:0 auto 14px auto">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="var(--champagne)" stroke-width="1.6"><path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"/></svg>
+          </div>
+          <div class="font-display" style="font-size:28px">Men’s Spa</div>
+          <div style="opacity:.8;margin-top:6px">Calma dorada · Verde profundo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- Rituales -->
+  <section id="rituales" class="section">
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">Rituales</h2>
+      <div class="grid cols-3">
+        <article class="card reveal" style="padding:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <h3 class="font-display" style="font-size:26px;margin:0">Lax Aureus</h3>
+            <span style="font-size:14px;opacity:.75">75 min</span>
+          </div>
+          <p style="opacity:.85">Masaje de presión lenta con aceites tibios y notas de sándalo. Ritmo que baja pulsaciones y aquieta la mente.</p>
+          <a class="btn" href="#contacto">Agendar</a>
+        </article>
+        <article class="card reveal" style="padding:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <h3 class="font-display" style="font-size:26px;margin:0">Sensus Vinum</h3>
+            <span style="font-size:14px;opacity:.75">90 min</span>
+          </div>
+          <p style="opacity:.85">Ritual sensorial con piedras volcánicas y compresas de vino tinto para restaurar y estimular.</p>
+          <a class="btn" href="#contacto">Agendar</a>
+        </article>
+        <article class="card reveal" style="padding:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <h3 class="font-display" style="font-size:26px;margin:0">Quies Deep</h3>
+            <span style="font-size:14px;opacity:.75">60 min</span>
+          </div>
+          <p style="opacity:.85">Trabajo de tejido profundo con estiramientos guiados. Recuperación atlética y foco mental.</p>
+          <a class="btn" href="#contacto">Agendar</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instalaciones -->
+  <section id="instalaciones" class="section">
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">Instalaciones</h2>
+      <div class="grid cols-4">
+        <div class="card reveal" style="padding:16px">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Sauna seco</div>
+        </div>
+        <div class="card reveal" style="padding:16px">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Ducha lluvia</div>
+        </div>
+        <div class="card reveal" style="padding:16px">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Sala silencio</div>
+        </div>
+        <div class="card reveal" style="padding:16px">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Barra de té</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membresías -->
+  <section id="membresias" class="section" style="background:rgba(0,0,0,.3)">
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">Membresías</h2>
+      <div class="grid cols-3">
+        <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
+          <div class="font-display" style="font-size:26px">Essentia</div>
+          <div class="gold" style="font-size:22px">$1,690 <span style="font-size:12px;color:rgba(255,255,255,.7)">/mes</span></div>
+          <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 ritual mensual</li><li>Check-out tardío</li><li>Té premium</li></ul>
+          <a class="btn" href="#contacto" style="margin-top:auto">Quiero ser miembro</a>
+        </div>
+        <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
+          <div class="font-display" style="font-size:26px">Aurea</div>
+          <div class="gold" style="font-size:22px">$2,490 <span style="font-size:12px;color:rgba(255,255,255,.7)">/mes</span></div>
+          <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>2 rituales mensuales</li><li>Upgrades aromáticos</li><li>Invitado al 50%</li></ul>
+          <a class="btn" href="#contacto" style="margin-top:auto">Quiero ser miembro</a>
+        </div>
+        <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
+          <div class="font-display" style="font-size:26px">Vinum</div>
+          <div class="gold" style="font-size:22px">$3,490 <span style="font-size:12px;color:rgba(255,255,255,.7)">/mes</span></div>
+          <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>3 rituales mensuales</li><li>Prioridad en agenda</li><li>Acceso nocturno</li></ul>
+          <a class="btn" href="#contacto" style="margin-top:auto">Quiero ser miembro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia" class="section" style="background:rgba(0,0,0,.3)">
+    <div class="container" style="display:grid;gap:28px;grid-template-columns:1fr;align-items:center">
+      <div class="reveal">
+        <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 12px">Experiencia</h2>
+        <p style="opacity:.85">Silencio, penumbra y texturas nobles. Aromas cálidos que susurran. Atención discreta y precisa. Cada detalle está pensado para que el cuerpo afloje y el ánimo se eleve.</p>
+        <ul style="margin:16px 0 0; padding-left:18px; opacity:.9">
+          <li>Amenidades premium y té de bienvenida</li>
+          <li>Cabinas individuales insonorizadas</li>
+          <li>Regaderas efecto lluvia y vapor</li>
+        </ul>
+      </div>
+      <div class="reveal card" style="padding:16px">
+        <div style="border-radius:18px;background:linear-gradient(180deg,rgba(42,58,52,.85),rgba(14,15,18,.92));padding:28px">
+          <blockquote class="font-display" style="font-size:24px;line-height:1.3;margin:0">“Sentí el cuerpo ligero y la mente en pausa. Es lujo que no presume, se siente.”</blockquote>
+          <div style="opacity:.75;margin-top:10px">— Cliente miembro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 18px">Contacto</h2>
+      <div class="grid" style="grid-template-columns:1fr;gap:20px}">
+        <div class="card reveal" style="padding:18px">
+          <form id="form" class="reveal show">
+            <label style="display:grid;gap:6px;margin-bottom:10px">
+              <span>Correo electrónico</span>
+              <input required type="email" name="email" placeholder="tu@correo.com" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)" />
+            </label>
+            <label style="display:grid;gap:6px;margin-bottom:10px">
+              <span>Alias</span>
+              <input required name="alias" placeholder="Cómo te llamamos" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)" />
+            </label>
+            <label style="display:grid;gap:6px;margin-bottom:14px">
+              <span>Comentario</span>
+              <textarea required name="comentario" rows="4" placeholder="Cuéntanos qué buscas…" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)"></textarea>
+            </label>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+              <div style="display:flex;gap:14px;font-size:14px;opacity:.85">
+                <button type="button" id="open-privacy-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+                <button type="button" id="open-terms-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+              </div>
+              <button class="btn btn-solid" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="card reveal" style="padding:18px">
+          <div style="display:grid;gap:8px">
+            <div>Tel: <span class="gold">+52 (55) 0000 0000</span></div>
+            <div>Correo: <a href="mailto:concierge@delitiare.mx" class="inline">concierge@delitiare.mx</a></div>
+            <div>Ubicación: CDMX — Polanco</div>
+            <div style="opacity:.8;font-size:14px">Horario: Lun–Dom 10:00–22:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div style="opacity:.75;font-size:14px">© <span id="y"></span> Delitiāre Men’s Spa</div>
+      <div style="display:flex;gap:16px;opacity:.85;font-size:14px">
+        <button id="open-privacy-3" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+        <button id="open-terms-3" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modales: Privacidad / Términos -->
+  <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-label="Aviso de privacidad">
+    <div class="box card" style="padding:18px;background:var(--charcoal)">
+      <h3 class="font-display" style="margin:0 0 10px;font-size:26px">Aviso de privacidad</h3>
+      <p style="opacity:.85;font-size:14px;line-height:1.6">Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre. Puedes solicitar acceso, rectificación o supresión escribiendo a <a class="inline" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.</p>
+      <div style="text-align:right;margin-top:10px"><button class="btn" data-close>Cerrar</button></div>
+    </div>
+  </div>
+
+  <div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
+    <div class="box card" style="padding:18px;background:var(--charcoal)">
+      <h3 class="font-display" style="margin:0 0 10px;font-size:26px">Términos y condiciones</h3>
+      <ul style="opacity:.85;font-size:14px;line-height:1.6;padding-left:18px;margin:0">
+        <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
+        <li>Pago en sitio. Propinas no incluidas.</li>
+        <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
+      </ul>
+      <div style="text-align:right;margin-top:10px"><button class="btn" data-close>Cerrar</button></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" style="display:none">Gracias. Te contactaremos a la brevedad.</div>
+
+  <script>
+    // Año actual
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Drawer móvil (incluye iPhone Pro Max)
+    const hamb = document.getElementById('hamb');
+    const drawer = document.getElementById('drawer');
+    hamb.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      hamb.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+    drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    },{threshold:0.45});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Scrollspy (para resaltar activo si quisieras future-proof)
+    // const sections = ['rituales','experiencia','instalaciones','membresias','contacto'];
+
+    // Form submit (demo)
+    const form = document.getElementById('form');
+    const toast = document.getElementById('toast');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form);
+      const email = String(fd.get('email')||'').trim();
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+      if(!valid){
+        toast.textContent = 'Por favor, ingresa un correo válido.';
+      } else {
+        toast.textContent = 'Gracias. Te contactaremos a la brevedad.';
+        form.reset();
+      }
+      toast.style.display = 'block';
+      setTimeout(()=>toast.style.display='none', 2500);
+    });
+
+    // Modales
+    const modalPrivacy = document.getElementById('modal-privacy');
+    const modalTerms = document.getElementById('modal-terms');
+    const openPrivacy = ()=> modalPrivacy.classList.add('open');
+    const openTerms = ()=> modalTerms.classList.add('open');
+    const closeAll = ()=>{ modalPrivacy.classList.remove('open'); modalTerms.classList.remove('open'); };
+    document.getElementById('open-privacy').onclick = openPrivacy;
+    document.getElementById('open-terms').onclick = openTerms;
+    document.getElementById('open-privacy-2').onclick = openPrivacy;
+    document.getElementById('open-terms-2').onclick = openTerms;
+    document.getElementById('open-privacy-3').onclick = openPrivacy;
+    document.getElementById('open-terms-3').onclick = openTerms;
+    document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeAll));
+    [modalPrivacy, modalTerms].forEach(m=> m.addEventListener('click', e=>{ if(e.target===m) closeAll(); }));
+    // ===== Carousel logic =====
+  (function(){
+    const slides = document.getElementById('slides');
+    if(!slides) return;
+    const total = slides.children.length;
+    let index = 0;
+    const dotsEl = document.getElementById('dots');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    // Build dots
+    for(let i=0;i<total;i++){
+      const b=document.createElement('button');
+      b.setAttribute('aria-label','Ir a la imagen '+(i+1));
+      b.addEventListener('click',()=>go(i,true));
+      dotsEl.appendChild(b);
+    }
+    function update(){
+      slides.style.transform = 'translateX(-'+(index*100)+'%)';
+      [...dotsEl.children].forEach((d,i)=> d.setAttribute('aria-current', i===index ? 'true':'false'));
+    }
+    function go(i,user=false){ index=(i+total)%total; update(); if(user) resetTimer(); }
+    prev.addEventListener('click',()=>go(index-1,true));
+    next.addEventListener('click',()=>go(index+1,true));
+    update();
+
+    // Auto-advance
+    let timer=null; function resetTimer(){ if(timer) clearInterval(timer); timer=setInterval(()=>go(index+1,false),6000); }
+    resetTimer();
+
+    const carousel=document.getElementById('carousel');
+    carousel.addEventListener('mouseenter',()=>{ if(timer) clearInterval(timer); });
+    carousel.addEventListener('mouseleave',resetTimer);
+
+    // Swipe support
+    let startX=null; let pointerId=null;
+    carousel.addEventListener('pointerdown',e=>{ startX=e.clientX; pointerId=e.pointerId; carousel.setPointerCapture(pointerId); });
+    carousel.addEventListener('pointerup',e=>{ if(startX==null) return; const dx=e.clientX-startX; if(Math.abs(dx)>40){ go(index + (dx<0?1:-1), true);} startX=null; try{carousel.releasePointerCapture(pointerId);}catch(_){} });
+  })();
+</script>
+</body>
+</html>
