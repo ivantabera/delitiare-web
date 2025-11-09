@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Delitiāre — Men’s Spa</title>
   <meta name="description" content="Delitiāre Men’s Spa: Delicia para los sentidos. Rituales premium de relajación para hombres en CDMX." />
-  <meta accesskey=""
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -18,7 +17,9 @@
           <!-- Monograma D con hoja -->
           <svg viewBox="0 0 86 86" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="gold" x1="0" y1="0" x2="86" y2="86"><stop stop-color="#E8D6A0"/><stop offset="1" stop-color="#B6934E"/></linearGradient>
+              <linearGradient id="gold" x1="0" y1="0" x2="86" y2="86">
+                <stop stop-color="#E8D6A0"/><stop offset="1" stop-color="#B6934E"/>
+              </linearGradient>
             </defs>
             <circle cx="43" cy="43" r="38" stroke="url(#gold)" stroke-width="1.5" fill="none" opacity=".6"/>
             <path d="M26 18 h16 q24 0 24 25 t-24 25 H26 Z m10 8 v34 h6 q16 0 16-17.1T42 26 Z" stroke="url(#gold)" stroke-width="2" fill="none"/>
@@ -41,7 +42,9 @@
           <a class="btn btn-solid" href="#contacto">Reservar</a>
         </div>
         <button class="hamb" id="hamb" aria-label="Abrir menú">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
         </button>
       </nav>
     </div>
@@ -63,43 +66,46 @@
 
   <!-- Hero -->
   <main id="home" class="hero">
-  <!-- Fullscreen image carousel background -->
-  <div id="carousel" class="carousel" aria-label="Galería de imágenes">
-    <div id="slides" class="slides" style="transform:translateX(0%)">
-      <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" /></div>
-      <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" /></div>
-      <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" /></div>
-    </div>
-    <div class="overlay-grad" aria-hidden="true"></div>
-    <div id="dots" class="dots" role="tablist" aria-label="Paginación"></div>
-  </div>
-
-  <!-- Original content preserved on top -->
-  <div class="container hero-grid overlay-content">
-    <div class="reveal show">
-      <h1 class="font-display" style="font-size: clamp(40px, 6vw, 78px); line-height:1.05; margin: 0 0 12px 0;">
-        <span class="gold-gradient">Delitiāre</span>
-        <span style="display:block;color:rgba(255,255,255,.9)">Delicia para los sentidos</span>
-      </h1>
-      <p style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px">Un santuario masculino donde el lujo es silencioso: rituales de relajación profunda, tacto experto y detalles dorados que encienden los sentidos.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn btn-solid" href="#rituales">Ver rituales</a>
-        <a class="btn" href="#contacto">Reservar ahora</a>
+    <!-- Fullscreen image carousel background -->
+    <div id="carousel" class="carousel" aria-label="Galería de imágenes">
+      <div id="slides" class="slides" style="transform:translateX(0%)">
+        <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" /></div>
+        <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" /></div>
+        <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" /></div>
       </div>
+      <div class="overlay-grad" aria-hidden="true"></div>
+      <!-- Dots solo como indicadores, el JS los vuelve no-interactivos -->
+      <div id="dots" class="dots" aria-hidden="true"></div>
     </div>
-    <div class="panel card reveal">
-      <div class="panel-inner">
-        <div style="text-align:center; padding:32px">
-          <div style="width:68px;height:68px;border-radius:50%;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;margin:0 auto 14px auto">
-            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="var(--champagne)" stroke-width="1.6"><path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"/></svg>
+
+    <!-- Contenido sobrepuesto -->
+    <div class="container hero-grid overlay-content">
+      <div class="reveal show">
+        <h1 class="font-display" style="font-size: clamp(40px, 6vw, 78px); line-height:1.05; margin: 0 0 12px 0;">
+          <span class="gold-gradient">Delitiāre</span>
+          <span style="display:block;color:rgba(255,255,255,.9)">Delicia para los sentidos</span>
+        </h1>
+        <p style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px">
+          Un santuario masculino donde el lujo es silencioso: rituales de relajación profunda, tacto experto y detalles dorados que encienden los sentidos.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-solid" href="#rituales">Ver rituales</a>
+          <a class="btn" href="#contacto">Reservar ahora</a>
+        </div>
+      </div>
+      <div class="panel card reveal">
+        <div class="panel-inner">
+          <div style="text-align:center; padding:32px">
+            <div style="width:68px;height:68px;border-radius:50%;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;margin:0 auto 14px auto">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="var(--champagne)" stroke-width="1.6"><path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"/></svg>
+            </div>
+            <div class="font-display" style="font-size:28px">Men’s Spa</div>
+            <div style="opacity:.8;margin-top:6px">Calma dorada · Verde profundo</div>
           </div>
-          <div class="font-display" style="font-size:28px">Men’s Spa</div>
-          <div style="opacity:.8;margin-top:6px">Calma dorada · Verde profundo</div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
   <!-- Rituales -->
   <section id="rituales" class="section">
@@ -254,123 +260,9 @@
     </div>
   </footer>
 
-  <!-- Modales: Privacidad / Términos -->
-  <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-label="Aviso de privacidad">
-    <div class="box card" style="padding:18px;background:var(--charcoal)">
-      <h3 class="font-display" style="margin:0 0 10px;font-size:26px">Aviso de privacidad</h3>
-      <p style="opacity:.85;font-size:14px;line-height:1.6">Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre. Puedes solicitar acceso, rectificación o supresión escribiendo a <a class="inline" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.</p>
-      <div style="text-align:right;margin-top:10px"><button class="btn" data-close>Cerrar</button></div>
-    </div>
-  </div>
-
-  <div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
-    <div class="box card" style="padding:18px;background:var(--charcoal)">
-      <h3 class="font-display" style="margin:0 0 10px;font-size:26px">Términos y condiciones</h3>
-      <ul style="opacity:.85;font-size:14px;line-height:1.6;padding-left:18px;margin:0">
-        <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
-        <li>Pago en sitio. Propinas no incluidas.</li>
-        <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
-      </ul>
-      <div style="text-align:right;margin-top:10px"><button class="btn" data-close>Cerrar</button></div>
-    </div>
-  </div>
-
-  <!-- Toast -->
-  <div id="toast" class="toast" style="display:none">Gracias. Te contactaremos a la brevedad.</div>
-
-  <script>
-    // Año actual
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Drawer móvil (incluye iPhone Pro Max)
-    const hamb = document.getElementById('hamb');
-    const drawer = document.getElementById('drawer');
-    hamb.addEventListener('click', () => {
-      const open = drawer.classList.toggle('open');
-      hamb.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-    });
-    drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
-
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
-    },{threshold:0.45});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Scrollspy (para resaltar activo si quisieras future-proof)
-    // const sections = ['rituales','experiencia','instalaciones','membresias','contacto'];
-
-    // Form submit (demo)
-    const form = document.getElementById('form');
-    const toast = document.getElementById('toast');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const fd = new FormData(form);
-      const email = String(fd.get('email')||'').trim();
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
-      if(!valid){
-        toast.textContent = 'Por favor, ingresa un correo válido.';
-      } else {
-        toast.textContent = 'Gracias. Te contactaremos a la brevedad.';
-        form.reset();
-      }
-      toast.style.display = 'block';
-      setTimeout(()=>toast.style.display='none', 2500);
-    });
-
-    // Modales
-    const modalPrivacy = document.getElementById('modal-privacy');
-    const modalTerms = document.getElementById('modal-terms');
-    const openPrivacy = ()=> modalPrivacy.classList.add('open');
-    const openTerms = ()=> modalTerms.classList.add('open');
-    const closeAll = ()=>{ modalPrivacy.classList.remove('open'); modalTerms.classList.remove('open'); };
-    document.getElementById('open-privacy').onclick = openPrivacy;
-    document.getElementById('open-terms').onclick = openTerms;
-    document.getElementById('open-privacy-2').onclick = openPrivacy;
-    document.getElementById('open-terms-2').onclick = openTerms;
-    document.getElementById('open-privacy-3').onclick = openPrivacy;
-    document.getElementById('open-terms-3').onclick = openTerms;
-    document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click', closeAll));
-    [modalPrivacy, modalTerms].forEach(m=> m.addEventListener('click', e=>{ if(e.target===m) closeAll(); }));
-    // ===== Carousel logic =====
-  (function(){
-    const slides = document.getElementById('slides');
-    if(!slides) return;
-    const total = slides.children.length;
-    let index = 0;
-    const dotsEl = document.getElementById('dots');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-
-    // Build dots
-    for(let i=0;i<total;i++){
-      const b=document.createElement('button');
-      b.setAttribute('aria-label','Ir a la imagen '+(i+1));
-      b.addEventListener('click',()=>go(i,true));
-      dotsEl.appendChild(b);
-    }
-    function update(){
-      slides.style.transform = 'translateX(-'+(index*100)+'%)';
-      [...dotsEl.children].forEach((d,i)=> d.setAttribute('aria-current', i===index ? 'true':'false'));
-    }
-    function go(i,user=false){ index=(i+total)%total; update(); if(user) resetTimer(); }
-    if (prev) prev.addEventListener('click',()=>go(index-1,true));
-    if (next) next.addEventListener('click',()=>go(index+1,true));
-    update();
-
-    // Auto-advance
-    let timer=null; function resetTimer(){ if(timer) clearInterval(timer); timer=setInterval(()=>go(index+1,false),6000); }
-    resetTimer();
-
-    const carousel=document.getElementById('carousel');
-    carousel.addEventListener('mouseenter',()=>{ if(timer) clearInterval(timer); });
-    carousel.addEventListener('mouseleave',resetTimer);
-
-    // Swipe support
-    let startX=null; let pointerId=null;
-    carousel.addEventListener('pointerdown',e=>{ startX=e.clientX; pointerId=e.pointerId; carousel.setPointerCapture(pointerId); });
-    carousel.addEventListener('pointerup',e=>{ if(startX==null) return; const dx=e.clientX-startX; if(Math.abs(dx)>40){ go(index + (dx<0?1:-1), true);} startX=null; try{carousel.releasePointerCapture(pointerId);}catch(_){} });
-  })();
-</script>
+  <!-- Scripts externos -->
+  <script src="js/header.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/forms-and-modals.js" defer></script>
 </body>
 </html>

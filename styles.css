@@ -133,6 +133,7 @@ nav .links {
   display: grid;
   place-items: center;
   background: transparent;
+  color: white;
 }
 .hamb svg {
   width: 22px;
