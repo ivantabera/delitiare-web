@@ -50,6 +50,12 @@ body {
   filter: brightness(0.96);
   color: var(--champagne);
 }
+.container-btn-rituales{
+  justify-self: center;
+}
+.btn-rituales{
+ margin-top: 15px;
+}
 .gold {
   color: var(--champagne);
 }
