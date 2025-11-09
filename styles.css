@@ -93,6 +93,11 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: var(--ivory);
+  text-decoration: none;
+}
+.brand:visited {
+  color: var(--ivory);
 }
 .brand .mark {
   width: 40px;
