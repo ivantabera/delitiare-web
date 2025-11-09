@@ -6,104 +6,8 @@
   <title>Delitiāre — Men’s Spa</title>
   <meta name="description" content="Delitiāre Men’s Spa: Delicia para los sentidos. Rituales premium de relajación para hombres en CDMX." />
   <meta accesskey=""
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --charcoal:#0E0F12; /* fondo premium */
-      --champagne:#D6B86A; /* dorado suave */
-      --ivory:#F6F3EE;      /* marfil */      --sage:#2A3A34;       /* verde profundo */
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;scroll-behavior:smooth}
-    body{margin:0;background:var(--charcoal);color:var(--ivory);font-family:"Manrope",system-ui,Segoe UI,Roboto,Arial,sans-serif}
-    .font-display{font-family:"Cormorant Garamond",serif}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-    /* Utilidades */
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:12px;border:1px solid rgba(214,184,106,.5);color:var(--ivory);text-decoration:none}
-    .btn:hover{background:rgba(214,184,106,.08)}
-    .btn-solid{background:var(--champagne);color:#221b0d;border-color:transparent}
-    .btn-solid:hover{filter:brightness(.96)}
-    .gold{color:var(--champagne)}
-    .gold-gradient{background:linear-gradient(145deg,#E8D6A0,#B6934E);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .card{border:1px solid rgba(214,184,106,.35);border-radius:22px;background:linear-gradient(180deg,rgba(214,184,106,.06),rgba(214,184,106,.02));box-shadow:0 16px 50px rgba(0,0,0,.35)}
-    .section{padding:96px 0;scroll-margin-top:96px}
-
-    /* Header / Nav */
-    header{position:fixed;inset:0 auto auto 0;right:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(0,0,0,.18);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(214,184,106,.45)}
-    .brand .title{line-height:1}
-    .brand .title .name{font-family:"Cormorant Garamond",serif;font-size:22px;letter-spacing:.06em}
-    .brand .title .tag{font-size:11px;letter-spacing:.25em;opacity:.8;text-transform:uppercase}
-    nav .links{display:none;gap:8px}
-    .hamb{width:42px;height:42px;border-radius:12px;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;background:transparent}
-    .hamb svg{width:22px;height:22px}
-    @media(min-width:900px){
-      nav .links{display:flex}
-      .hamb{display:none}
-    }
-    .drawer{display:none}
-    .drawer.open{display:block;background:rgba(14,15,18,.95);border-top:1px solid rgba(255,255,255,.08)}
-    .drawer a,.drawer button{display:block;width:100%;text-align:left;padding:12px 8px;color:var(--ivory);background:transparent;border:0}
-    .drawer a:hover,.drawer button:hover{background:rgba(255,255,255,.06)}
-
-    /* Hero */
-    .hero{min-height:100svh;display:flex;align-items:center;background:
-      radial-gradient(60% 60% at 50% 0%, rgba(214,184,106,.20), transparent 60%),
-      radial-gradient(60% 60% at 100% 0%, rgba(42,58,52,.18), transparent 60%),
-      linear-gradient(180deg,#0E0F12,#0B0C0E);
-      padding-top:96px
-    }
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:32px}
-    @media(min-width:940px){.hero-grid{grid-template-columns:7fr 5fr;gap:48px}}
-    .panel{border-radius:24px;overflow:hidden}
-    .panel-inner{display:grid;place-items:center;min-height:420px;background:linear-gradient(180deg,rgba(42,58,52,.85),rgba(14,15,18,.92))}
-
-    /* Grid cards */
-    .grid{display:grid;gap:20px}
-    .grid.cols-3{grid-template-columns:1fr}
-    @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .grid.cols-4{grid-template-columns:1fr 1fr}
-    @media(min-width:1200px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
-
-    /* Reveal on scroll */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
-    .reveal.show{opacity:1;transform:none}
-
-    /* Footer */
-    footer{border-top:1px solid rgba(255,255,255,.08);padding:36px 0}
-
-    /* Modales */
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;place-items:center;padding:16px;z-index:60}
-    .modal.open{display:grid}
-    .modal .box{max-width:720px;width:100%}
-
-    /* Toast */
-    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:rgba(0,0,0,.7);border:1px solid rgba(214,184,106,.5);padding:10px 14px;border-radius:12px;z-index:70}
-
-    /* Links */
-    a.inline{color:var(--ivory);opacity:.85}
-    a.inline:hover{color:var(--champagne)}
-    /* ===== Carousel header (fullscreen) ===== */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:96px;overflow:hidden;background:none !important}
-  .carousel{position:absolute;inset:0;z-index:0}
-  .slides{height:100%;display:flex;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
-  .slide{min-width:100%;height:100%;position:relative}
-  .slide img{width:100%;height:100%;object-fit:cover;object-position:center}
-  .overlay-grad{position:absolute;inset:0;background:
-    radial-gradient(60% 60% at 50% 0%, rgba(214,184,106,.20), transparent 60%),
-    linear-gradient(180deg, rgba(14,15,18,.35) 0%, rgba(14,15,18,.75) 50%, rgba(14,15,18,.95) 100%)}
-  .overlay-content{position:relative;z-index:1}
-  .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:1px solid rgba(214,184,106,.45);color:var(--ivory);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;backdrop-filter: blur(2px);z-index:2}
-  .ctrl:hover{background:rgba(0,0,0,.5)}
-  .ctrl.prev{left:14px}
-  .ctrl.next{right:14px}
-  .dots{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;display:flex;gap:8px;z-index:2}
-  .dots button{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.45);border:1px solid rgba(214,184,106,.5);padding:0}
-  .dots button[aria-current="true"]{background:var(--champagne)}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Header -->
@@ -167,8 +71,6 @@
       <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" /></div>
     </div>
     <div class="overlay-grad" aria-hidden="true"></div>
-    <button id="prev" class="ctrl prev" aria-label="Anterior" title="Anterior">&#10094;</button>
-    <button id="next" class="ctrl next" aria-label="Siguiente" title="Siguiente">&#10095;</button>
     <div id="dots" class="dots" role="tablist" aria-label="Paginación"></div>
   </div>
 
@@ -305,7 +207,7 @@
   <section id="contacto" class="section">
     <div class="container">
       <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 18px">Contacto</h2>
-      <div class="grid" style="grid-template-columns:1fr;gap:20px}">
+      <div class="grid" style="grid-template-columns:1fr;gap:20px">
         <div class="card reveal" style="padding:18px">
           <form id="form" class="reveal show">
             <label style="display:grid;gap:6px;margin-bottom:10px">
@@ -452,8 +354,8 @@
       [...dotsEl.children].forEach((d,i)=> d.setAttribute('aria-current', i===index ? 'true':'false'));
     }
     function go(i,user=false){ index=(i+total)%total; update(); if(user) resetTimer(); }
-    prev.addEventListener('click',()=>go(index-1,true));
-    next.addEventListener('click',()=>go(index+1,true));
+    if (prev) prev.addEventListener('click',()=>go(index-1,true));
+    if (next) next.addEventListener('click',()=>go(index+1,true));
     update();
 
     // Auto-advance

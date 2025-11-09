@@ -18,7 +18,7 @@ if (hamb && drawer) {
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
   const carousel = document.getElementById('carousel');
-  if (!slides || !dotsEl || !prev || !next || !carousel) return;
+  if (!slides || !dotsEl || !carousel) return;
 
   const total = slides.children.length;
   let index = 0;
@@ -44,8 +44,8 @@ if (hamb && drawer) {
     if (user) resetTimer();
   }
 
-  prev.addEventListener('click', () => go(index - 1, true));
-  next.addEventListener('click', () => go(index + 1, true));
+  if (prev) prev.addEventListener('click', () => go(index - 1, true));
+  if (next) next.addEventListener('click', () => go(index + 1, true));
   update();
 
   // Auto-advance
