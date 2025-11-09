@@ -32,30 +32,78 @@ if (form && toast) {
 }
 
 // Modales
-const modalPrivacy = document.getElementById("modal-privacy");
-const modalTerms = document.getElementById("modal-terms");
-const openPrivacy = () => modalPrivacy?.classList.add("open");
-const openTerms = () => modalTerms?.classList.add("open");
-const closeAll = () => {
-  modalPrivacy?.classList.remove("open");
-  modalTerms?.classList.remove("open");
-};
+// ===== Modales (privacidad / términos) =====
+(() => {
+  const ids = {
+    privacy: 'modal-privacy',
+    terms: 'modal-terms'
+  };
+  const triggers = [
+    { id: 'open-privacy',  target: ids.privacy },
+    { id: 'open-privacy-2', target: ids.privacy },
+    { id: 'open-privacy-3', target: ids.privacy },
+    { id: 'open-terms',   target: ids.terms },
+    { id: 'open-terms-2', target: ids.terms },
+    { id: 'open-terms-3', target: ids.terms },
+  ];
 
-document.getElementById("open-privacy")?.addEventListener("click", openPrivacy);
-document.getElementById("open-terms")?.addEventListener("click", openTerms);
-document
-  .getElementById("open-privacy-2")
-  ?.addEventListener("click", openPrivacy);
-document.getElementById("open-terms-2")?.addEventListener("click", openTerms);
-document
-  .getElementById("open-privacy-3")
-  ?.addEventListener("click", openPrivacy);
-document.getElementById("open-terms-3")?.addEventListener("click", openTerms);
-document
-  .querySelectorAll("[data-close]")
-  .forEach((b) => b.addEventListener("click", closeAll));
-[modalPrivacy, modalTerms].forEach((m) => {
-  m?.addEventListener("click", (e) => {
-    if (e.target === m) closeAll();
+  const focusableSel = [
+    'a[href]', 'area[href]',
+    'button:not([disabled])',
+    'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(',');
+
+  let lastFocused = null;
+
+  const openModal = (id) => {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    lastFocused = document.activeElement;
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+
+    // Focus trap
+    const focusables = modal.querySelectorAll(focusableSel);
+    if (focusables.length) focusables[0].focus();
+
+    modal.addEventListener('pointerdown', onBackdrop, true);
+    modal.addEventListener('keydown', onKeydown);
+    modal.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', () => closeModal(modal)));
+  };
+
+  const closeModal = (modal) => {
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    modal.removeEventListener('pointerdown', onBackdrop, true);
+    modal.removeEventListener('keydown', onKeydown);
+    if (lastFocused && document.body.contains(lastFocused)) lastFocused.focus();
+  };
+
+  function onBackdrop(e) {
+    const dialog = e.currentTarget.querySelector('.modal__dialog');
+    if (dialog && !dialog.contains(e.target)) {
+      closeModal(e.currentTarget);
+    }
+  }
+  function onKeydown(e) {
+    if (e.key === 'Escape') closeModal(e.currentTarget);
+    // focus trap
+    if (e.key === 'Tab') {
+      const els = e.currentTarget.querySelectorAll(focusableSel);
+      if (!els.length) return;
+      const first = els[0], last = els[els.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        last.focus(); e.preventDefault();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        first.focus(); e.preventDefault();
+      }
+    }
+  }
+
+  // Wirear triggers
+  triggers.forEach(t => {
+    const el = document.getElementById(t.id);
+    if (el) el.addEventListener('click', () => openModal(t.target));
   });
-});
+})();
