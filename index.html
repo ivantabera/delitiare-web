@@ -5,15 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Delitiāre — Men’s Spa</title>
   <meta name="description" content="Delitiāre Men’s Spa: Delicia para los sentidos. Rituales premium de relajación para hombres en CDMX." />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
 
-  <!-- FAVICONS -->
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png?v=1">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=1">
-  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://delitiare.mx/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Delitiāre — Men’s Spa">
+  <meta property="og:description" content="Rituales premium de relajación para hombres en CDMX. Calma dorada · Verde profundo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://delitiare.mx/">
+  <meta property="og:image" content="https://delitiare.mx/assets/og/cover.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Delitiāre — Men’s Spa">
+  <meta name="twitter:description" content="Delicia para los sentidos. Rituales premium en CDMX.">
+  <meta name="twitter:image" content="https://delitiare.mx/assets/og/cover.jpg">
+
+  <!-- Fonts: mejor con display=swap + preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Favicons (del bloque del punto 1) -->
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/icons/manifest.webmanifest">
   <meta name="theme-color" content="#0e0f12">
 </head>
 <body>
@@ -60,9 +83,9 @@
     <!-- Fullscreen image carousel background -->
     <div id="carousel" class="carousel" aria-label="Galería de imágenes">
       <div id="slides" class="slides" style="transform:translateX(0%)">
-        <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" /></div>
-        <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" /></div>
-        <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" /></div>
+        <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" loading="lazy" decoding="async"/></div>
+        <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" loading="lazy" decoding="async"/></div>
+        <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" loading="lazy" decoding="async"/></div>
       </div>
       <div class="overlay-grad" aria-hidden="true"></div>
       <!-- Dots solo como indicadores, el JS los vuelve no-interactivos -->
@@ -126,7 +149,7 @@
         </article>
       </div>
       <div class="container-btn-rituales">
-        <a class="btn btn-rituales" href="https://wa.me/5621776741?text=Hola%2C%20quisiera%20más%20información" target="_blank">Agendar</a>
+        <a class="btn btn-rituales" href="https://wa.me/5621776741?text=Hola%2C%20quisiera%20más%20información" target="_blank" rel="noopener noreferrer">Agendar</a>
       </div>
     </div>
   </section>
@@ -161,19 +184,40 @@
           <div class="font-display" style="font-size:26px">Essentia</div>
           <div class="gold" style="font-size:22px">$2,800 <span style="font-size:12px;color:rgba(255,255,255,.7)">/ritual</span></div>
           <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 Masaje lenceria</li><li>Terminación manual</li></ul>
-          <a class="btn" href="#contacto" style="margin-top:auto">Contacto</a>
+          <a 
+            class="btn" 
+            data-wa
+            data-wa-phone="5566275081"
+            data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
+            data-wa-var-ritual="Essentia"
+            style="margin-top:auto"
+          >Contacto</a>
         </div>
         <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
           <div class="font-display" style="font-size:26px">Sensus</div>
           <div class="gold" style="font-size:22px">$3,800 <span style="font-size:12px;color:rgba(255,255,255,.7)">/ritual</span></div>
           <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 Masaje topless</li><li>Terminación manual</li></ul>
-          <a class="btn" href="#contacto" style="margin-top:auto">Contacto</a>
+          <a 
+            class="btn" 
+            data-wa
+            data-wa-phone="5566275081"
+            data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
+            data-wa-var-ritual="Sensus"
+            style="margin-top:auto"
+          >Contacto</a>
         </div>
         <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
           <div class="font-display" style="font-size:26px">Deep</div>
           <div class="gold" style="font-size:22px">$4,800 <span style="font-size:12px;color:rgba(255,255,255,.7)">/ritual</span></div>
           <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 Masaje nude</li><li>Terminación manual</li></ul>
-          <a class="btn" href="#contacto" style="margin-top:auto">Contacto</a>
+          <a 
+            class="btn" 
+            data-wa
+            data-wa-phone="5566275081"
+            data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
+            data-wa-var-ritual="Deep"
+            style="margin-top:auto"
+          >Contacto</a>
         </div>
       </div>
     </div>
@@ -230,7 +274,7 @@
         </div>
         <div class="card reveal" style="padding:18px">
           <div style="display:grid;gap:8px">
-            <div>Tel: <span class="gold">+52 (55) 0000 0000</span></div>
+            <div>Tel: <span class="gold">+52 (55) 6627 5081</span></div>
             <div>Correo: <a href="mailto:concierge@delitiare.mx" class="inline">concierge@delitiare.mx</a></div>
             <div>Ubicación: CDMX — Polanco</div>
             <div style="opacity:.8;font-size:14px">Horario: Lun–Dom 10:00–22:00</div>
@@ -297,5 +341,6 @@
   <script src="js/header.js" defer></script>
   <script src="js/carousel.js" defer></script>
   <script src="js/forms-and-modals.js" defer></script>
+  <script src="js/wa-links.js" defer></script>
 </body>
 </html>

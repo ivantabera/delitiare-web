@@ -1,0 +1,229 @@
+
+
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivían | Delitiāre</title>
+  <meta name="description" content="Agenda una sesión con Vivían, especialista de Delitiāre. Consulta su horario, zonas que visita y costos de traslado por Uber." />
+
+  <!-- Fuentes del proyecto (mismas del index) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS principal del sitio: ajusta la ruta si tu hoja vive en otra carpeta -->
+  <link rel="stylesheet" href="../index.css" />
+  <!-- Si tu CSS principal está en /assets/css/ o raíz, ajusta:  ../assets/css/index.css  o  /index.css -->
+
+  <style>
+    /* Ajustes mínimos específicos de la página, sin romper la esencia global */
+    .profile-hero {
+      position: relative;
+      min-height: 70svh;
+      display: grid;
+      align-items: center;
+      padding-top: 96px; /* compensa header fijo */
+      overflow: hidden;
+      background:
+        radial-gradient(60% 60% at 50% 0%, rgba(214, 184, 106, 0.18), transparent 60%),
+        linear-gradient(180deg, #0e0f12, #0b0c0e);
+    }
+    .profile-hero .profile-grid {
+      display: grid; gap: 28px; grid-template-columns: 1fr; align-items: center;
+    }
+    @media (min-width: 940px) {
+      .profile-hero .profile-grid { grid-template-columns: 6fr 5fr; gap: 44px; }
+    }
+    .profile-card {
+      display: grid; gap: 16px; padding: 28px; border-radius: 22px;
+      border: 1px solid rgba(214, 184, 106, 0.35);
+      background: linear-gradient(180deg, rgba(214, 184, 106, 0.06), rgba(214, 184, 106, 0.02));
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35);
+    }
+    .profile-name { font-family: "Cormorant Garamond", serif; font-size: clamp(28px, 5vw, 46px); letter-spacing: .02em; }
+    .profile-tag { opacity: .85; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
+    .profile-portrait { border-radius: 22px; overflow: hidden; border: 1px solid rgba(214,184,106,.35); }
+    .profile-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .details-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 1000px) { .details-grid { grid-template-columns: 7fr 5fr; } }
+
+    .sticky-card { position: sticky; top: 110px; }
+    .meta-list { margin: 0; padding-left: 18px; line-height: 1.7; }
+    .zones-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .zones-table th, .zones-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.08); text-align: left; }
+    .zones-table th { opacity: .8; font-weight: 600; }
+
+    .gallery { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    @media (min-width: 900px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+    .gallery figure { margin: 0; border-radius: 18px; overflow: hidden; border: 1px solid rgba(214,184,106,.28); }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .muted { opacity: .8; }
+    .badge { display:inline-block; padding:.2rem .55rem; border:1px solid rgba(214,184,106,.45); border-radius:999px; font-size:12px; letter-spacing:.04em; }
+  </style>
+</head>
+<body>
+  <!-- Header mínimo (si tu layout ya lo inyecta, puedes omitir este bloque) -->
+  <header>
+    <div class="container nav">
+      <a href="/" class="brand">
+        <span class="mark">🜂</span>
+        <span class="title">
+          <span class="name">Delitiāre</span><br>
+          <span class="tag">Experiencia Premium</span>
+        </span>
+      </a>
+      <nav>
+        <div class="links">
+          <a class="btn" href="/index.html#rituales">Rituales</a>
+          <a class="btn" href="/index.html#contacto">Contacto</a>
+        </div>
+        <button class="hamb" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="drawer" id="drawer"></div>
+  </header>
+
+  <main>
+    <!-- HERO PERFIL -->
+    <section class="profile-hero section">
+      <div class="container profile-grid">
+        <div class="profile-card reveal">
+          <span class="badge">Especialista Delitiāre</span>
+          <h1 class="profile-name gold-gradient">Vivían</h1>
+          <p class="muted">Cuidado personalizado, presencia impecable y manos expertas. Vivían integra técnicas de relajación profunda con un toque sensorial único para una experiencia realmente memorable.</p>
+          <div>
+            <a class="btn btn-solid" id="cta-agendar" target="_blank" rel="noopener" href="https://wa.me/525566275081?text=Hola%20Deliti%C4%81re%2C%20quiero%20agendar%20con%20Viv%C3%ADan%20por%20favor.%20Mi%20nombre%20es%3A%20">
+              Agendar con Vivían
+            </a>
+          </div>
+          <div class="muted" style="font-size:13px;">WhatsApp seguro · Respuesta rápida</div>
+        </div>
+        <div class="profile-portrait card reveal" aria-hidden="true">
+          <img src="../assets/specialists/vivian-hero.jpg" alt="Retrato de Vivían" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLES Y RESERVA -->
+    <section class="section">
+      <div class="container details-grid">
+        <div class="left-col">
+          <article class="card reveal" style="padding:24px;">
+            <h2 class="font-display" style="margin-top:0;">Acerca de Vivían</h2>
+            <p>Con una formación orientada al bienestar masculino, Vivían domina rituales de relajación, descontracturantes y técnicas sensoriales de alta precisión. Su enfoque es totalmente personalizado: ritmo, presión y ambiente se adaptan a ti.</p>
+            <ul class="meta-list">
+              <li>Duración sugerida por sesión: 60–90 minutos.</li>
+              <li>Ambiente premium: música, aromaterapia y temperatura ideal.</li>
+              <li>Opciones a domicilio dentro de CDMX (sujeto a zona).</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="padding:24px;">
+            <h3 class="font-display" style="margin-top:0;">Horario de atención</h3>
+            <ul class="meta-list">
+              <li><strong>Lunes a Viernes:</strong> 10:00 – 22:00</li>
+              <li><strong>Sábado y Domingo:</strong> 11:00 – 20:00</li>
+              <li><strong>Última cita:</strong> 1.5 h antes del cierre</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="padding:24px;">
+            <h3 class="font-display" style="margin-top:0;">Zonas que visita & Uber</h3>
+            <p class="muted" style="margin-top:0;">El costo de Uber se calcula ida y vuelta al momento de la reserva según demanda. Estas son las zonas más comunes:</p>
+            <table class="zones-table" aria-label="Zonas de atención y costo estimado de Uber">
+              <thead>
+                <tr><th>Zona</th><th>Uber (MXN)</th><th>Notas</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Roma / Condesa</td><td>Según demanda</td><td>Horario flexible</td></tr>
+                <tr><td>Polanco / Anzures</td><td>Según demanda</td><td>Requiere acceso</td></tr>
+                <tr><td>Del Valle / Nápoles</td><td>Según demanda</td><td>Estacionamiento sugerido</td></tr>
+                <tr><td>Coyoacán / San Ángel</td><td>Según demanda</td><td>Preferente tarde</td></tr>
+                <tr><td>Santa Fe</td><td>Según demanda</td><td>Tiempo de traslado</td></tr>
+              </tbody>
+            </table>
+            <p class="muted" style="font-size:13px;">Si tu zona no aparece, escríbenos por WhatsApp y lo gestionamos.</p>
+          </article>
+        </div>
+
+        <aside class="sticky-card">
+          <div class="card reveal" style="padding:24px;">
+            <h3 class="font-display" style="margin-top:0;">Reserva tu sesión</h3>
+            <p class="muted">Confirma fecha, zona y duración. Te enviaremos el total y el costo de traslado en segundos.</p>
+
+            <div style="display:grid; gap:10px; margin:14px 0 8px;">
+              <a class="btn btn-solid" target="_blank" rel="noopener" href="https://wa.me/525566275081?text=Hola%20Deliti%C4%81re%2C%20quiero%20agendar%20con%20Viv%C3%ADan.%20Zona%3A%20%5Bescribe%5D%2C%20D%C3%ADa%3A%20%5Bfecha%5D%2C%20Hora%3A%20%5Bhora%5D%2C%20Duraci%C3%B3n%3A%20%5B60%2F90%20min%5D">Agendar por WhatsApp</a>
+              <a class="btn" href="mailto:contacto@delitiare.mx?subject=Reserva%20con%20Viv%C3%ADan">Agendar por correo</a>
+            </div>
+
+            <ul class="meta-list muted" style="font-size:13px; margin-top:8px;">
+              <li>Atención discreta y profesional.</li>
+              <li>Reagenda sin costo con 12 h de anticipación.</li>
+              <li>Traslado Uber ida y vuelta se agrega al total.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- GALERÍA (4 fotos) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="font-display" style="margin:0 0 16px">Galería</h2>
+        <div class="gallery reveal" aria-label="Galería de Vivían">
+          <figure><img src="../assets/specialists/vivian-1.jpg" alt="Vivían en sesión 1"></figure>
+          <figure><img src="../assets/specialists/vivian-2.jpg" alt="Vivían en sesión 2"></figure>
+          <figure><img src="../assets/specialists/vivian-3.jpg" alt="Vivían en sesión 3"></figure>
+          <figure><img src="../assets/specialists/vivian-4.jpg" alt="Vivían en sesión 4"></figure>
+        </div>
+        <p class="muted" style="margin-top:12px; font-size:13px;">Imágenes con fines ilustrativos y representativos del servicio.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:16px;">
+      <small class="muted">© <span id="y"></span> Delitiāre</small>
+      <div style="display:flex; gap:10px;">
+        <button type="button" id="open-privacy-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+        <button type="button" id="open-terms-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD básico para SEO local/persona -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vivían",
+    "jobTitle": "Especialista en Bienestar Masculino",
+    "worksFor": { "@type": "Organization", "name": "Delitiāre" },
+    "areaServed": "Ciudad de México",
+    "availableService": "Rituales de relajación y descontracturantes",
+    "url": "https://delitiare.mx/especialist/vivian.html",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "reservas",
+      "telephone": "+52-55-6627-5081",
+      "areaServed": "MX"
+    }
+  }
+  </script>
+
+  <!-- Pequeños helpers (no invasivos) -->
+  <script>
+    // Año actual en footer
+    const y = document.getElementById('y'); if (y) y.textContent = new Date().getFullYear();
+
+    // Reveal on scroll reutilizando tu lógica
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
