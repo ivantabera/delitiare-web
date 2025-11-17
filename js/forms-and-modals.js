@@ -148,3 +148,80 @@ if (y) y.textContent = new Date().getFullYear();
     if (el) el.addEventListener('click', () => openModal(t.target));
   });
 })();
+
+/* === Especialistas (modal dinámico) === */
+(function () {
+  const DATA = {
+    vivian: {
+      name: 'Vivían',
+      img: 'assets/specialists/vivian-hero.jpg',
+      desc: 'Cuidado personalizado, presencia impecable y técnicas de relajación profunda con un toque sensorial único.',
+      link: 'especialist/vivian.html'
+    },
+    'placeholder-1': {
+      name: 'Especialista',
+      img: 'assets/placeholder/specialist.jpg',
+      desc: 'Muy pronto conocerás su perfil completo.',
+      link: '#'
+    },
+    'placeholder-2': {
+      name: 'Especialista',
+      img: 'assets/placeholder/specialist.jpg',
+      desc: 'Muy pronto conocerás su perfil completo.',
+      link: '#'
+    },
+    'placeholder-3': {
+      name: 'Especialista',
+      img: 'assets/placeholder/specialist.jpg',
+      desc: 'Muy pronto conocerás su perfil completo.',
+      link: '#'
+    }
+  };
+
+  const modal = document.getElementById('specialist-modal');
+  if (!modal) return;
+
+  const $img = modal.querySelector('#specialist-img');
+  const $title = modal.querySelector('#specialist-title');
+  const $desc = modal.querySelector('#specialist-desc');
+  const $link = modal.querySelector('#specialist-link');
+
+  const open = (id) => {
+    const s = DATA[id];
+    if (!s) return;
+    $img.src = s.img; $img.alt = `Foto de ${s.name}`;
+    $title.textContent = s.name;
+    $desc.textContent = s.desc;
+    $link.href = s.link;
+
+    modal.setAttribute('aria-hidden', 'false');
+    document.addEventListener('keydown', onKey);
+    modal.addEventListener('click', onBackdrop);
+    const closeBtn = modal.querySelector('[data-close]');
+    if (closeBtn) closeBtn.focus({ preventScroll: true });
+  };
+
+  const close = () => {
+    modal.setAttribute('aria-hidden', 'true');
+    document.removeEventListener('keydown', onKey);
+    modal.removeEventListener('click', onBackdrop);
+  };
+
+  const onKey = (e) => { if (e.key === 'Escape') close(); };
+  const onBackdrop = (e) => { if (e.target === modal) close(); };
+
+  // Botón cerrar (compatibilidad con tus otros modales)
+  modal.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-close]');
+    if (btn) close();
+  });
+
+  // Abrir desde cards (delegación)
+  document.addEventListener('click', (e) => {
+    const cardBtn = e.target.closest('.specialist-card');
+    if (!cardBtn) return;
+    const id = cardBtn.getAttribute('data-specialist');
+    if (!id) return;
+    open(id);
+  });
+})();

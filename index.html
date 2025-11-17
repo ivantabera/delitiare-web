@@ -104,7 +104,13 @@
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn btn-solid" href="#rituales">Ver rituales</a>
-          <a class="btn" href="#contacto">Reservar ahora</a>
+          <a 
+            class="btn"
+            data-wa
+            data-wa-phone="5566275081"
+            data-wa-text="Hola, quiero reservar un ritual {{ritual}}"
+            data-wa-var-ritual="me pueden dar información por favor?"
+          >Reservar ahora</a>
         </div>
       </div>
       <div class="panel card reveal">
@@ -156,24 +162,53 @@
 
   <!-- Especialistas -->
   <section id="especialistas" class="section">
-    <div class="container">
-      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">ESPECIALISTAS</h2>
-      <div class="grid cols-4">
-        <div class="card reveal" style="padding:16px">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Vivian</div>
+  <div class="container">
+    <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">ESPECIALISTAS</h2>
+    <div class="grid cols-4">
+      <!-- Card: Vivían -->
+      <button class="card reveal specialist-card" data-specialist="vivian" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+        <div style="aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid rgba(214,184,106,.28);">
+          <img src="assets/specialists/vivian-hero.jpg" alt="Especialista Vivían" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
-        <div class="card reveal" style="padding:16px">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Vivian</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <strong class="font-display" style="letter-spacing:.02em">Vivían</strong>
+          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
         </div>
-        <div class="card reveal" style="padding:16px">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Vivian</div>
+      </button>
+
+      <!-- Próximas especialistas (placeholders listos para reemplazar) -->
+      <button class="card reveal specialist-card" data-specialis∏t="placeholder-1" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+          <span class="font-display">Próximamente</span>
         </div>
-        <div class="card reveal" style="padding:16px">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center" class="font-display">Vivian</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
+          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
         </div>
-      </div>
+      </button>
+
+      <button class="card reveal specialist-card" data-specialist="placeholder-2" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+          <span class="font-display">Próximamente</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
+          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
+        </div>
+      </button>
+
+      <button class="card reveal specialist-card" data-specialist="placeholder-3" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+          <span class="font-display">Próximamente</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
+          <span class="badge">Ver perfil</span>
+        </div>
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Valor de experiencia -->
   <section id="valor-experiencia" class="section" style="background:rgba(0,0,0,.3)">
@@ -265,8 +300,8 @@
             </label>
             <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
               <div style="display:flex;gap:14px;font-size:14px;opacity:.85">
-                <button type="button" id="open-privacy-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
-                <button type="button" id="open-terms-2" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+                <button type="button" id="open-privacy-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+                <button type="button" id="open-terms-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
               </div>
               <button class="btn btn-solid" type="submit">Enviar</button>
             </div>
@@ -275,7 +310,7 @@
         <div class="card reveal" style="padding:18px">
           <div style="display:grid;gap:8px">
             <div>Tel: <span class="gold">+52 (55) 6627 5081</span></div>
-            <div>Correo: <a href="mailto:concierge@delitiare.mx" class="inline">concierge@delitiare.mx</a></div>
+            <div>Correo: <a href="mailto:concierge@delitiare.mx" class="priv-terms">concierge@delitiare.mx</a></div>
             <div>Ubicación: CDMX — Polanco</div>
             <div style="opacity:.8;font-size:14px">Horario: Lun–Dom 10:00–22:00</div>
           </div>
@@ -295,8 +330,8 @@
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div style="opacity:.75;font-size:14px">© <span id="y"></span> Delitiāre Men’s Spa</div>
       <div style="display:flex;gap:16px;opacity:.85;font-size:14px">
-        <button id="open-privacy-3" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
-        <button id="open-terms-3" class="inline" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+        <button id="open-privacy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+        <button id="open-terms-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
       </div>
     </div>
   </footer>
@@ -310,7 +345,7 @@
       <p>
         Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
         Puedes solicitar acceso, rectificación o supresión escribiendo a
-        <a class="inline" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
+        <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
       </p>
     </div>
     <div class="modal__footer">
@@ -333,6 +368,28 @@
     </div>
     <div class="modal__footer">
       <button class="btn" type="button" data-close>Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal especialista (reutilizable) -->
+<div class="modal" id="specialist-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specialist-title">
+  <div class="modal__dialog card" style="padding:0;max-width:760px">
+    <button class="modal__close" type="button" aria-label="Cerrar" data-close>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <h3 class="modal__title" id="specialist-title">—</h3>
+    <div class="modal__body" style="display:grid; gap:14px">
+      <div class="profile-portrait" style="border-radius:16px; overflow:hidden; border:1px solid rgba(214,184,106,.28)">
+        <img id="specialist-img" src="" alt="" style="width:100%;height:320px;object-fit:cover;display:block"/>
+      </div>
+      <p id="specialist-desc" class="muted" style="margin:0">—</p>
+    </div>
+    <div class="modal__footer">
+      <a id="specialist-link" class="btn btn-solid" href="#">Ver perfil completo</a>
     </div>
   </div>
 </div>
