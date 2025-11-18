@@ -278,6 +278,14 @@ button.priv-terms {
 button.priv-terms:hover {
   color: var(--champagne);
 }
+a.priv-terms {
+  color: var(--ivory);
+  opacity: 0.85;
+}
+a.priv-terms:hover {
+  color: var(--champagne);
+}
+
 /* ===== Carousel header (fullscreen) ===== */
 .hero {
   position: relative;
