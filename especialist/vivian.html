@@ -17,6 +17,7 @@
 
     <!-- CSS global -->
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./style-specialist.css" />
 
 
     <!-- Favicons (del bloque del punto 1) -->
@@ -99,10 +100,46 @@
 
           <div class="profile-portrait card reveal" aria-hidden="true">
             <img
-              src="../assets/specialists/vivian-hero.jpg"
+              src="../assets/specialists/Vivian/Foto principal_.jpg"
               alt="Retrato de Vivían"
             />
           </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section class="section">
+        <div class="container">
+          <h2 class="font-display section-title">Galería</h2>
+          <div class="gallery reveal" aria-label="Galería de Vivían" data-specialist-gallery>
+            <figure>
+              <img
+                src="../assets/specialists/Vivian/01-vivian.jpeg"
+                alt="Vivían en sesión 1"
+              />
+            </figure>
+            <figure>
+              <img
+                src="../assets/specialists/Vivian/02-vivian.jpeg"
+                alt="Vivían en sesión 2"
+              />
+            </figure>
+            <figure>
+              <img
+                src="../assets/specialists/Vivian/03-vivian.jpeg"
+                alt="Vivían en sesión 3"
+              />
+            </figure>
+            <figure>
+              <img
+                src="../assets/specialists/Vivian/04-vivian.jpeg"
+                alt="Vivían en sesión 4"
+              />
+            </figure>
+          </div>
+          <p class="muted gallery-caption">
+            Imágenes con fines ilustrativos y representativos del servicio.
+          </p>
         </div>
       </section>
 
@@ -134,8 +171,7 @@
                 Zonas que visita & Uber
               </h3>
               <p class="muted">
-                El costo de Uber se calcula ida y vuelta al momento de la
-                reserva según demanda. Estas son las zonas más frecuentes:
+                El costo de Uber se calcula ida y vuelta al momento de que la masajista llega a tu domicilio. Para reservar una sesión se realizará un anticipo de $500 que se descuenta del precio total de tu servicio. Estas son las zonas más frecuentes:
               </p>
               <table
                 class="zones-table"
@@ -200,12 +236,6 @@
                 >
                   Agendar por WhatsApp
                 </a>
-                <a
-                  class="btn"
-                  href="mailto:contacto@delitiare.mx?subject=Reserva%20con%20Viv%C3%ADan"
-                >
-                  Agendar por correo
-                </a>
               </div>
 
               <ul class="meta-list muted profile-notes">
@@ -218,42 +248,81 @@
         </div>
       </section>
 
-      <!-- GALERÍA -->
-      <section class="section">
-        <div class="container">
-          <h2 class="font-display section-title">Galería</h2>
-          <div class="gallery reveal" aria-label="Galería de Vivían">
-            <figure>
-              <img
-                src="../assets/specialists/vivian-1.jpg"
-                alt="Vivían en sesión 1"
-              />
-            </figure>
-            <figure>
-              <img
-                src="../assets/specialists/vivian-2.jpg"
-                alt="Vivían en sesión 2"
-              />
-            </figure>
-            <figure>
-              <img
-                src="../assets/specialists/vivian-3.jpg"
-                alt="Vivían en sesión 3"
-              />
-            </figure>
-            <figure>
-              <img
-                src="../assets/specialists/vivian-4.jpg"
-                alt="Vivían en sesión 4"
-              />
-            </figure>
-          </div>
-          <p class="muted gallery-caption">
-            Imágenes con fines ilustrativos y representativos del servicio.
-          </p>
-        </div>
-      </section>
     </main>
+
+    <div
+        class="gallery-modal"
+        id="gallery-modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Galería ampliada de especialista"
+      >
+        <div class="gallery-modal-backdrop" data-close="true"></div>
+        <div class="gallery-modal-dialog">
+          <header class="gallery-modal-header">
+            <h3
+              class="gallery-modal-title gold-gradient"
+              id="gallery-modal-title"
+            >
+              Galería
+            </h3>
+            <button
+              class="gallery-modal-close"
+              type="button"
+              aria-label="Cerrar galería"
+              data-close="true"
+            >
+              ✕
+            </button>
+          </header>
+
+          <div class="gallery-modal-body">
+            <div class="gallery-modal-main">
+              <img
+                id="gallery-modal-image"
+                src=""
+                alt="Foto de la galería"
+              />
+              <div class="gallery-modal-controls">
+                <button
+                  class="gallery-nav-btn"
+                  type="button"
+                  data-dir="prev"
+                >
+                  ‹
+                </button>
+                <button
+                  class="gallery-nav-btn"
+                  type="button"
+                  data-dir="next"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <footer class="gallery-modal-footer">
+            <span
+              class="gallery-modal-counter"
+              id="gallery-modal-counter"
+            >
+              1 / 4
+            </span>
+            <div class="gallery-modal-actions">
+              <a
+                class="btn btn-solid"
+                id="gallery-modal-wa"
+                target="_blank"
+                rel="noopener"
+                href="#"
+              >
+                Agendar
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
 
     <footer>
       <div
@@ -313,5 +382,7 @@
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     </script>
+
+    <script src="./especialist-gallery.js"></script>
   </body>
 </html>

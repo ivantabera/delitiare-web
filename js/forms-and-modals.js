@@ -173,7 +173,7 @@ if (y) y.textContent = new Date().getFullYear();
   const DATA = {
     vivian: {
       name: 'Vivían',
-      img: 'assets/specialists/vivian-hero.jpg',
+      img: 'assets/specialists/Vivian/Foto principal_.jpg',
       desc: 'Cuidado personalizado, presencia impecable y técnicas de relajación profunda con un toque sensorial único.',
       link: 'especialist/vivian.html' // Ajusta esta ruta si tienes una página dedicada
     },

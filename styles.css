@@ -51,6 +51,15 @@ body {
   filter: brightness(0.96);
   color: var(--champagne);
 }
+.btn-solid-profile {
+  background: var(--champagne);
+  color: var(--ivory);
+  border-color: transparent;
+}
+.btn-solid-profile:hover {
+  filter: brightness(0.96);
+  color: var(--champagne);
+}
 .container-btn-rituales{
   justify-self: center;
 }
