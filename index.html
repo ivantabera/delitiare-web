@@ -3,50 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Delitiāre — Men’s Spa</title>
   <meta name="description" content="Delitiāre Men’s Spa: Delicia para los sentidos. Rituales premium de relajación para hombres en CDMX." />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://delitiare.mx/">
+  <link rel="canonical" href="https://delitiare.mx/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Delitiāre — Men’s Spa">
-  <meta property="og:description" content="Rituales premium de relajación para hombres en CDMX. Calma dorada · Verde profundo.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://delitiare.mx/">
-  <meta property="og:image" content="https://delitiare.mx/assets/og/cover.jpg">
+  <meta property="og:title" content="Delitiāre — Men’s Spa" />
+  <meta property="og:description" content="Rituales premium de relajación para hombres en CDMX. Calma dorada · Verde profundo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://delitiare.mx/" />
+  <meta property="og:image" content="https://delitiare.mx/assets/og/cover.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Delitiāre — Men’s Spa">
-  <meta name="twitter:description" content="Delicia para los sentidos. Rituales premium en CDMX.">
-  <meta name="twitter:image" content="https://delitiare.mx/assets/og/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Delitiāre — Men’s Spa" />
+  <meta name="twitter:description" content="Delicia para los sentidos. Rituales premium en CDMX." />
+  <meta name="twitter:image" content="https://delitiare.mx/assets/og/cover.jpg" />
 
-  <!-- Fonts: mejor con display=swap + preconnect -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Favicons (del bloque del punto 1) -->
-  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-  <link rel="manifest" href="/assets/icons/manifest.json">
-  <meta name="theme-color" content="#0e0f12">
+  <!-- Favicons -->
+  <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/icons/manifest.webmanifest" />
+  <meta name="theme-color" content="#0e0f12" />
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Delitiāre inicio">
-        <img class="mark" src="./assets/delitiare-logo.png" alt="Delitiāre" >
+        <img class="mark" src="./assets/delitiare-logo.png" alt="Delitiāre" />
         <span class="title">
-          <span class="name">Delitiāre</span><br>
+          <span class="name">Delitiāre</span><br />
           <span class="tag">MEN’S SPA</span>
         </span>
       </a>
@@ -61,11 +62,15 @@
         </div>
         <button class="hamb" id="hamb" aria-label="Abrir menú">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
       </nav>
     </div>
+
+    <!-- Drawer común para todas las páginas -->
     <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
       <div class="container" style="padding:10px 20px 18px">
         <a href="#rituales">Rituales</a>
@@ -83,12 +88,11 @@
     <!-- Fullscreen image carousel background -->
     <div id="carousel" class="carousel" aria-label="Galería de imágenes">
       <div id="slides" class="slides" style="transform:translateX(0%)">
-        <div class="slide"><img src="assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" loading="lazy" decoding="async"/></div>
-        <div class="slide"><img src="assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" loading="lazy" decoding="async"/></div>
-        <div class="slide"><img src="assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" loading="lazy" decoding="async"/></div>
+        <div class="slide"><img src="./assets/hero1.jpg" alt="Cabina de masaje en tonos charcoal y dorado" loading="lazy" decoding="async" /></div>
+        <div class="slide"><img src="./assets/hero2.jpg" alt="Detalle de toallas y amenidades en champagne e ivory" loading="lazy" decoding="async" /></div>
+        <div class="slide"><img src="./assets/hero3.jpg" alt="Lounge del spa con iluminación tenue y deep-sage" loading="lazy" decoding="async" /></div>
       </div>
       <div class="overlay-grad" aria-hidden="true"></div>
-      <!-- Dots solo como indicadores, el JS los vuelve no-interactivos -->
       <div id="dots" class="dots" aria-hidden="true"></div>
     </div>
 
@@ -144,7 +148,7 @@
             <h3 class="font-display" style="font-size:26px;margin:0">Sensus</h3>
             <span style="font-size:14px;opacity:.75">50 min</span>
           </div>
-          <p style="opacity:.85">Déjate llevar por un juego sensorial a través de la combinación del masaje y el ritual de  nuestra especialista en topless.</p>
+          <p style="opacity:.85">Déjate llevar por un juego sensorial a través de la combinación del masaje y el ritual de nuestra especialista en topless.</p>
         </article>
         <article class="card reveal" style="padding:20px">
           <div style="display:flex;align-items:center;justify-content:space-between">
@@ -155,60 +159,78 @@
         </article>
       </div>
       <div class="container-btn-rituales">
-        <a class="btn btn-rituales" href="https://wa.me/5621776741?text=Hola%2C%20quisiera%20más%20información" target="_blank" rel="noopener noreferrer">Agendar</a>
+        <a 
+          class="btn"
+          data-wa
+          data-wa-phone="5566275081"
+          data-wa-text="Hola, quiero agendar un ritual me pueden dar información por favor?""
+          data-wa-var-ritual="me pueden dar información por favor?"
+        >
+          Agendar ahora
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Especialistas -->
   <section id="especialistas" class="section">
-  <div class="container">
-    <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">ESPECIALISTAS</h2>
-    <div class="grid cols-4">
-      <!-- Card: Vivían -->
-      <button class="card reveal specialist-card" data-specialist="vivian" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-        <div style="aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid rgba(214,184,106,.28);">
-          <img src="assets/specialists/Vivian/Foto principal_.jpg" alt="Especialista Vivían" style="width:100%;height:100%;object-fit:cover;display:block" />
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-          <strong class="font-display" style="letter-spacing:.02em">Vivían</strong>
-          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
-        </div>
-      </button>
+    <div class="container">
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">ESPECIALISTAS</h2>
+      <div class="grid cols-4">
+        <!-- Card: Vivían -->
+        <button class="card reveal specialist-card" data-specialist="vivian" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Vivian/Fotoprincipal.jpeg" alt="Especialista Vivían" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Vivían</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
 
-      <!-- Próximas especialistas (placeholders listos para reemplazar) -->
-      <button class="card reveal specialist-card" data-specialist="placeholder-1" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-          <span class="font-display">Próximamente</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
-          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
-        </div>
-      </button>
+        <!-- Placeholder cards -->
+        <button class="card reveal specialist-card" data-specialist="tess" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Tess/Fotoprincipal.jpeg" alt="Especialista Tess" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Tess</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
 
-      <button class="card reveal specialist-card" data-specialist="placeholder-2" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-          <span class="font-display">Próximamente</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
-          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
-        </div>
-      </button>
+        <button class="card reveal specialist-card" data-specialist="catalina" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Catalina/04-catalina.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Catalina</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
 
-      <button class="card reveal specialist-card" data-specialist="placeholder-3" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-        <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-          <span class="font-display">Próximamente</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-          <strong class="font-display" style="letter-spacing:.02em">Especialista</strong>
-          <span class="badge"><p class="font-display" style="letter-spacing:.02em" >Ver perfil</p></span>
-        </div>
-      </button>
+        <button class="card reveal specialist-card" data-specialist="sally" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Sally/Fotoprincipal.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Sally</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
+
+        <button class="card reveal specialist-card" data-specialist="sally" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Sally/Fotoprincipal.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Sally</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Valor de experiencia -->
   <section id="valor-experiencia" class="section" style="background:rgba(0,0,0,.3)">
@@ -218,7 +240,7 @@
         <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
           <div class="font-display" style="font-size:26px">Essentia</div>
           <div class="gold" style="font-size:22px">$2,800 <span style="font-size:12px;color:rgba(255,255,255,.7)">/ritual</span></div>
-          <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 Masaje lenceria</li><li>Terminación manual</li></ul>
+          <ul style="opacity:.88;margin:8px 0 0;padding-left:18px"><li>1 Masaje lencería</li><li>Terminación manual</li></ul>
           <a 
             class="btn" 
             data-wa
@@ -249,7 +271,7 @@
             class="btn" 
             data-wa
             data-wa-phone="5566275081"
-            data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
+            data-wa-text="Hola, quiero reservar un ritual {{ritual}}"
             data-wa-var-ritual="Deep"
             style="margin-top:auto"
           >Contacto</a>
@@ -264,11 +286,6 @@
       <div class="reveal">
         <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 12px">Experiencia</h2>
         <p style="opacity:.85">Goza de la penumbra y las texturas nobles. Aromas cálidos que te susurran. Atención discreta y precisa. Cada detalle está pensado para que el cuerpo afloje y el ánimo se eleve.</p>
-        <!-- <ul style="margin:16px 0 0; padding-left:18px; opacity:.9">
-          <li>Amenidades premium y té de bienvenida</li>
-          <li>Cabinas individuales insonorizadas</li>
-          <li>Regaderas efecto lluvia y vapor</li>
-        </ul> -->
       </div>
       <div class="reveal card" style="padding:16px">
         <div style="border-radius:18px;background:linear-gradient(180deg,rgba(42,58,52,.85),rgba(14,15,18,.92));padding:28px">
@@ -321,84 +338,85 @@
 
   <section class="section">
     <div class="container">
-      <h3 class="font-display gold-gradient" style="font-size: clamp(25px,3vw,40px); margin:0 0 22px">Nuestras especialistas no ofrecen ningún tipo de sexo, oral vaginal o anal.</h3>
+      <h3 class="font-display gold-gradient" style="font-size: clamp(25px,3vw,40px); margin:0 0 22px">
+        Nuestras especialistas no ofrecen ningún tipo de sexo, oral vaginal o anal.
+      </h3>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer unificado -->
   <footer>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div style="opacity:.75;font-size:14px">© <span id="y"></span> Delitiāre Men’s Spa</div>
       <div style="display:flex;gap:16px;opacity:.85;font-size:14px">
         <button id="open-privacy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
         <button id="open-terms-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
-        <a id="" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer" href="./empleo.html">Empleo</a>
+        <a class="priv-terms" href="./empleo.html">Empleo</a>
       </div>
     </div>
   </footer>
 
   <!-- Modal: Aviso de privacidad -->
-<div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
-  <div class="modal__dialog" role="document">
-    <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
-    <h3 id="privacy-title" class="font-display modal__title">Aviso de privacidad</h3>
-    <div class="modal__body">
-      <p>
-        Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
-        Puedes solicitar acceso, rectificación o supresión escribiendo a
-        <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
-      </p>
-    </div>
-    <div class="modal__footer">
-      <button class="btn" type="button" data-close>Cerrar</button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: Términos y condiciones -->
-<div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terms-title">
-  <div class="modal__dialog" role="document">
-    <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
-    <h3 id="terms-title" class="font-display modal__title">Términos y condiciones</h3>
-    <div class="modal__body">
-      <ul>
-        <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
-        <li>Pago en sitio. Propinas no incluidas.</li>
-        <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
-      </ul>
-    </div>
-    <div class="modal__footer">
-      <button class="btn" type="button" data-close>Cerrar</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal especialista (reutilizable) -->
-<div class="modal" id="specialist-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specialist-title">
-  <div class="modal__dialog card" style="padding:0;max-width:760px">
-    <button class="modal__close" type="button" aria-label="Cerrar" data-close>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </button>
-    <h3 class="modal__title" id="specialist-title">—</h3>
-    <div class="modal__body" style="display:grid; gap:14px">
-      <div class="profile-portrait" style="border-radius:16px; overflow:hidden; border:1px solid rgba(214,184,106,.28)">
-        <img id="specialist-img" src="" alt="" style="width:100%;height:320px;object-fit:cover;display:block"/>
+  <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="privacy-title" class="font-display modal__title">Aviso de privacidad</h3>
+      <div class="modal__body">
+        <p>
+          Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
+          Puedes solicitar acceso, rectificación o supresión escribiendo a
+          <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
+        </p>
       </div>
-      <p id="specialist-desc" class="muted" style="margin:0">—</p>
-    </div>
-    <div class="modal__footer">
-      <a id="specialist-link" class="btn btn-solid-profile" href="#">Ver perfil completo</a>
+      <div class="modal__footer">
+        <button class="btn" type="button" data-close>Cerrar</button>
+      </div>
     </div>
   </div>
-</div>
 
-  <!-- Scripts externos -->
-  <script src="js/header.js" defer></script>
-  <script src="js/carousel.js" defer></script>
-  <script src="js/forms-and-modals.js" defer></script>
-  <script src="js/wa-links.js" defer></script>
+  <!-- Modal: Términos y condiciones -->
+  <div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terms-title">
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="terms-title" class="font-display modal__title">Términos y condiciones</h3>
+      <div class="modal__body">
+        <ul>
+          <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
+          <li>Pago en sitio. Propinas no incluidas.</li>
+          <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
+        </ul>
+      </div>
+      <div class="modal__footer">
+        <button class="btn" type="button" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal especialista (reutilizable) -->
+  <div class="modal" id="specialist-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specialist-title">
+    <div class="modal__dialog card" style="padding:0;max-width:760px">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h3 class="modal__title" id="specialist-title">—</h3>
+      <div class="modal__body" style="display:grid; gap:14px">
+        <div class="profile-portrait" style="border-radius:16px; overflow:hidden; border:1px solid rgba(214,184,106,.28)">
+          <img id="specialist-img" src="" alt="" style="width:100%;height:320px;object-fit:cover;display:block"/>
+        </div>
+        <p id="specialist-desc" class="muted" style="margin:0">—</p>
+      </div>
+      <div class="modal__footer">
+        <a id="specialist-link" class="btn btn-solid-profile" href="#">Ver perfil completo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/header.js" defer></script>
+  <script src="./js/carousel.js" defer></script>
+  <script src="./js/forms-and-modals.js" defer></script>
+  <script src="./js/wa-links.js" defer></script>
 </body>
 </html>

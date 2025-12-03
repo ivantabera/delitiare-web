@@ -1,50 +1,34 @@
 // js/wa-links.js
-// ===== WhatsApp link builder — aplica a cualquier enlace con [data-wa] =====
 (() => {
-  const DEFAULT_COUNTRY = "52";
+  const DEFAULT_PHONE = "525566275081"; // puedes cambiarlo si quieres otro por defecto
 
-  const normalize = (raw, cc = DEFAULT_COUNTRY) => {
-    const digits = String(raw || "").replace(/\D+/g, "");
-    if (!digits) return null;
-    if (digits.startsWith(cc)) return digits;
-    if (digits.length === 10) return cc + digits;
-    return digits; // fallback si ya trae CC distinto
-  };
+  function buildWaUrl(phone, text) {
+    const cleanPhone = String(phone || "").replace(/\D/g, "");
+    const base = cleanPhone ? `https://wa.me/${cleanPhone}` : "https://wa.me/";
+    const qs = text ? `?text=${encodeURIComponent(text)}` : "";
+    return base + qs;
+  }
 
-  const interpolate = (tpl = "", data = {}) =>
-    tpl.replace(
-      /\{\{\s*([\w-]+)\s*\}\}/g,
-      (_, k) => data[k.toLowerCase()] ?? ""
-    );
+  document.querySelectorAll("a[data-wa]").forEach((el) => {
+    const phone = el.getAttribute("data-wa-phone") || DEFAULT_PHONE;
+    let text = el.getAttribute("data-wa-text") || "";
 
-  const build = (root = document) => {
-    root.querySelectorAll("[data-wa]").forEach((el) => {
-      const phone = normalize(el.dataset.waPhone, el.dataset.waCountry);
-      if (!phone) return;
-
-      // variables data-wa-var-*
-      const vars = Object.fromEntries(
-        Object.entries(el.dataset)
-          .filter(([k]) => k.startsWith("waVar"))
-          .map(([k, v]) => [k.slice(5).toLowerCase(), v])
-      );
-
-      const text = interpolate(el.dataset.waText || "", vars);
-      const url = `https://wa.me/${phone}${
-        text ? `?text=${encodeURIComponent(text)}` : ""
-      }`;
-      el.setAttribute("href", url);
-
-      if (el.dataset.waBlank !== "false") {
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener noreferrer");
+    // Sustituir cualquier {{variable}} usando atributos data-wa-var-*
+    // ej: data-wa-var-ritual -> {{ritual}}
+    //     data-wa-var-nombre -> {{nombre}}
+    Array.from(el.attributes).forEach((attr) => {
+      if (attr.name.startsWith("data-wa-var-")) {
+        const key = attr.name.replace("data-wa-var-", ""); // ritual / nombre / lo que sea
+        const value = attr.value;
+        const re = new RegExp(`{{\\s*${key}\\s*}}`, "g");
+        text = text.replace(re, value);
       }
     });
-  };
 
-  // Construye en DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", () => build());
+    const url = buildWaUrl(phone, text);
 
-  // Expone utilidad global por si necesitas reconstruir en runtime
-  window.buildWhatsAppLinks = build;
+    el.setAttribute("href", url);
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener noreferrer");
+  });
 })();

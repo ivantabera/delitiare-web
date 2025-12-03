@@ -173,27 +173,33 @@ if (y) y.textContent = new Date().getFullYear();
   const DATA = {
     vivian: {
       name: 'Vivían',
-      img: 'assets/specialists/Vivian/Foto principal_.jpg',
+      img: 'assets/specialists/Vivian/01-vivian.jpeg',
       desc: 'Cuidado personalizado, presencia impecable y técnicas de relajación profunda con un toque sensorial único.',
       link: 'especialist/vivian.html' // Ajusta esta ruta si tienes una página dedicada
     },
-    'placeholder-1': {
+    tess: {
       name: 'Especialista',
-      img: 'assets/placeholder/specialist.jpg',
+      img: 'assets/specialists/Tess/01-tess.jpeg',
       desc: 'Muy pronto conocerás su perfil completo.',
-      link: '#'
+      link: 'especialist/tess.html'
     },
-    'placeholder-2': {
+    catalina: {
       name: 'Especialista',
-      img: 'assets/placeholder/specialist.jpg',
+      img: 'assets/specialists/Catalina/Fotoprincipal.jpeg',
       desc: 'Muy pronto conocerás su perfil completo.',
-      link: '#'
+      link: 'especialist/catalina.html'
     },
-    'placeholder-3': {
+    sally: {
       name: 'Especialista',
-      img: 'assets/placeholder/specialist.jpg',
+      img: 'assets/specialists/Sally/01-sally.jpeg',
       desc: 'Muy pronto conocerás su perfil completo.',
-      link: '#'
+      link: 'especialist/sally.html'
+    },
+    priscila: {
+      name: 'Especialista',
+      img: 'assets/specialists/Sally/01-sally.jpeg',
+      desc: 'Muy pronto conocerás su perfil completo.',
+      link: 'especialist/priscila.html'
     }
   };
 
@@ -207,6 +213,7 @@ if (y) y.textContent = new Date().getFullYear();
 
   const open = (id) => {
     const s = DATA[id];
+    console.log("🚀 ~ open ~ s:", s)
     if (!s) return;
 
     $img.src = s.img;

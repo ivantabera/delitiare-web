@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-MX">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Empleo en Delitiāre — Men’s Spa</title>
     <meta
       name="description"
@@ -37,32 +38,28 @@
       content="https://delitiare.mx/assets/og/cover.jpg"
     />
 
-    <!-- Fonts -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles.css" />
 
     <!-- Favicons -->
-    <link rel="icon" href="/assets/icons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png"
-    />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/assets/icons/manifest.json" />
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/icons/manifest.webmanifest" />
     <meta name="theme-color" content="#0e0f12" />
   </head>
   <body>
-    <!-- Header (puedes copiar el mismo de index pero sin el hero) -->
+    <!-- Header unificado -->
     <header>
       <div class="container nav">
-        <a class="brand" href="./index.html" aria-label="Delitiāre inicio">
+        <a class="brand" href="./index.html#home" aria-label="Delitiāre inicio">
           <img class="mark" src="./assets/delitiare-logo.png" alt="Delitiāre" />
           <span class="title">
             <span class="name">Delitiāre</span><br />
@@ -87,6 +84,18 @@
           </button>
         </nav>
       </div>
+
+      <!-- Drawer igual que en index pero apuntando al home -->
+      <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
+        <div class="container" style="padding:10px 20px 18px">
+          <a href="./index.html#rituales">Rituales</a>
+          <a href="./index.html#especialistas">Especialistas</a>
+          <a href="./index.html#valor-experiencia">Valor de experiencia</a>
+          <a href="./index.html#experiencia">Experiencia</a>
+          <a href="./index.html#contacto">Contacto</a>
+          <a class="btn" href="./index.html#contacto" style="margin-top:6px">Reservar</a>
+        </div>
+      </div>
     </header>
 
     <main class="section">
@@ -102,7 +111,7 @@
           servicio discreto, el tacto profesional y la calidez humana.
         </p>
 
-        <section class="card" style="padding: 20px; margin-bottom: 18px">
+        <section class="card reveal" style="padding: 20px; margin-bottom: 18px">
           <h2 class="font-display" style="font-size: 26px; margin-top: 0">
             Vacante: Especialista en masajes
           </h2>
@@ -129,7 +138,7 @@
       </div>
     </main>
 
-    <!-- Puedes reutilizar el mismo footer y modales que en index -->
+    <!-- Footer + modales igual que en index -->
     <footer>
       <div
         class="container"
@@ -164,10 +173,43 @@
       </div>
     </footer>
 
-    <!-- Modales reciclados si los necesitas aquí también -->
-    <!-- (puedes copiar los mismos bloques #modal-privacy, #modal-terms) -->
+    <!-- Modales reutilizados -->
+    <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
+      <div class="modal__dialog" role="document">
+        <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+        <h3 id="privacy-title" class="font-display modal__title">Aviso de privacidad</h3>
+        <div class="modal__body">
+          <p>
+            Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
+            Puedes solicitar acceso, rectificación o supresión escribiendo a
+            <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
+          </p>
+        </div>
+        <div class="modal__footer">
+          <button class="btn" type="button" data-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terms-title">
+      <div class="modal__dialog" role="document">
+        <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+        <h3 id="terms-title" class="font-display modal__title">Términos y condiciones</h3>
+        <div class="modal__body">
+          <ul>
+            <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
+            <li>Pago en sitio. Propinas no incluidas.</li>
+            <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
+          </ul>
+        </div>
+        <div class="modal__footer">
+          <button class="btn" type="button" data-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/header.js" defer></script>
     <script src="./js/forms-and-modals.js" defer></script>
+    <script src="./js/wa-links.js" defer></script>
   </body>
 </html>
