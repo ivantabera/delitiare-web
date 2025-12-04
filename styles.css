@@ -381,7 +381,9 @@ a.priv-terms:hover {
   border-radius: 22px; /* bordes curveados */
   border: 1px solid color-mix(in oklab, var(--champagne) 35%, transparent);
   box-shadow: 0 24px 70px rgba(0,0,0,.45);
-  overflow: clip;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background:
     radial-gradient(120% 120% at 0% 0%, color-mix(in oklab, var(--sage) 18%, transparent), transparent),
     linear-gradient(180deg, rgba(42,58,52,.85), rgba(14,15,18,.95));
@@ -589,3 +591,4 @@ a.priv-terms:hover {
   font-size: 13px;
   margin-top: 8px;
 }
+

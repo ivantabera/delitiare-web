@@ -1,0 +1,179 @@
+:root {
+  --charcoal: #0e0f12;
+  --champagne: #d6b86a;
+  --ivory: #f6f3ee;
+  --sage: #2a3a34;
+
+  --radius-card: 20px;
+  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.65);
+  --font-body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+/* Reset mínimo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--charcoal);
+  color: var(--ivory);
+  line-height: 1.6;
+}
+
+/* Layout base */
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section.hero {
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.section-cta {
+  padding-bottom: 96px;
+}
+
+.narrow {
+  max-width: 780px;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(
+      circle at top,
+      rgba(214, 184, 106, 0.12),
+      transparent 55%
+    ),
+    #050507;
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  font-size: 11px;
+  opacity: 0.7;
+  letter-spacing: 0.18em;
+}
+
+/* Navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-link {
+  background: transparent;
+  color: var(--ivory);
+  border-color: transparent;
+}
+
+.btn-link:hover {
+  border-color: rgba(214, 184, 106, 0.4);
+}
+
+.btn-solid {
+  background: var(--champagne);
+  color: #111;
+  font-weight: 600;
+  border-color: var(--champagne);
+}
+
+.btn-solid:hover {
+  transform: translateY(-1px);
+}
+
+/* Hamburguesa móvil */
+.hamb {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: 0;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.hamb span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ivory);
+}
+
+/* Drawer */
+.drawer {
+  display: none;
+  background: #050507;
+  border-top: 1px solid rgba(255, 255, 255, 0.

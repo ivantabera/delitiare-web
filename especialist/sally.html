@@ -74,7 +74,7 @@
           <div class="links">
             <a class="btn" href="../index.html#rituales">Rituales</a>
             <a class="btn" href="../index.html#especialistas">Especialistas</a>
-            <a class="btn" href="../index.html#contacto">Contacto</a>
+            <a class="btn" href="../index.html#valor-experiencia">Valor de experiencia</a>
           </div>
           <button class="hamb" id="hamb" aria-label="Abrir menú">
             <svg
@@ -97,9 +97,6 @@
           <a href="../index.html#rituales">Rituales</a>
           <a href="../index.html#especialistas">Especialistas</a>
           <a href="../index.html#valor-experiencia">Valor de experiencia</a>
-          <a href="../index.html#experiencia">Experiencia</a>
-          <a href="../index.html#contacto">Contacto</a>
-          <a class="btn" href="../index.html#contacto" style="margin-top:6px">Reservar</a>
         </div>
       </div>
     </header>
@@ -177,9 +174,6 @@
               />
             </figure>
           </div>
-          <p class="muted gallery-caption">
-            Imágenes con fines ilustrativos y representativos del servicio.
-          </p>
         </div>
       </section>
 
@@ -268,13 +262,14 @@
               </p>
 
               <div class="profile-actions">
-                <a
-                  class="btn btn-solid"
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wa.me/525566275081?text=Hola%20Deliti%C4%81re%2C%20quiero%20agendar%20con%20Viv%C3%ADan."
+                <a 
+                  class="btn" 
+                  data-wa
+                  data-wa-phone="5566275081"
+                  data-wa-text="Hola, quiero agendar con {{nombre}}"
+                  data-wa-var-nombre="Sally"
                 >
-                  Agendar por WhatsApp
+                  Agenda con Sally por WhatsApp
                 </a>
               </div>
 

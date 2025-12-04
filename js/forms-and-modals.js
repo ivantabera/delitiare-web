@@ -59,7 +59,9 @@ if (y) y.textContent = new Date().getFullYear();
 (() => {
   const ids = {
     privacy: 'modal-privacy',
-    terms: 'modal-terms'
+    terms: 'modal-terms',
+    rules: 'modal-rules',
+    policy: 'modal-policy'
   };
 
   const triggers = [
@@ -68,7 +70,13 @@ if (y) y.textContent = new Date().getFullYear();
     { id: 'open-privacy-3', target: ids.privacy },
     { id: 'open-terms', target: ids.terms },
     { id: 'open-terms-2', target: ids.terms },
-    { id: 'open-terms-3', target: ids.terms }
+    { id: 'open-terms-3', target: ids.terms },
+    { id: 'open-rules', target: ids.rules },
+    { id: 'open-rules-2', target: ids.rules },
+    { id: 'open-rules-3', target: ids.rules },
+    { id: 'open-policy', target: ids.policy },
+    { id: 'open-policy-2', target: ids.policy },
+    { id: 'open-policy-3', target: ids.policy }
   ];
 
   const focusableSel = [
@@ -172,33 +180,33 @@ if (y) y.textContent = new Date().getFullYear();
 (() => {
   const DATA = {
     vivian: {
-      name: 'Vivían',
+      name: 'Vivián',
       img: 'assets/specialists/Vivian/01-vivian.jpeg',
-      desc: 'Cuidado personalizado, presencia impecable y técnicas de relajación profunda con un toque sensorial único.',
+      desc: 'Juventud, ternura y un toque etéreo. Vivian es una experiencia sensorial que te abraza y te guía suavemente hacia un estado de calma y placer profundo.',
       link: 'especialist/vivian.html' // Ajusta esta ruta si tienes una página dedicada
     },
     tess: {
-      name: 'Especialista',
+      name: 'Tess',
       img: 'assets/specialists/Tess/01-tess.jpeg',
-      desc: 'Muy pronto conocerás su perfil completo.',
+      desc: 'Belleza que se siente: cálida, luminosa y sorprendentemente profunda. Tess es presencia que envuelve y toque que llega al alma.',
       link: 'especialist/tess.html'
     },
     catalina: {
-      name: 'Especialista',
+      name: 'Catalina',
       img: 'assets/specialists/Catalina/Fotoprincipal.jpeg',
-      desc: 'Muy pronto conocerás su perfil completo.',
+      desc: 'Sexy, radiante y divertida. Catalina ilumina tu sesión con chispa y un toque juguetón capaz de despertar placer directo al alma.',
       link: 'especialist/catalina.html'
     },
     sally: {
-      name: 'Especialista',
+      name: 'Sally',
       img: 'assets/specialists/Sally/01-sally.jpeg',
-      desc: 'Muy pronto conocerás su perfil completo.',
+      desc: 'Dulce, coqueta y encantadora. El toque cálido de Sally despierta sensaciones profundas que te invitan a explorar placeres nuevos.',
       link: 'especialist/sally.html'
     },
     priscila: {
-      name: 'Especialista',
-      img: 'assets/specialists/Sally/01-sally.jpeg',
-      desc: 'Muy pronto conocerás su perfil completo.',
+      name: 'Priscila',
+      img: 'assets/specialists/Priscila/02-priscila.jpeg',
+      desc: 'Carisma, alegría y energía amazónica que despierta todos tus sentidos. Pris transforma cada sesión en un viaje atrevido hacia nuevas sensaciones.',
       link: 'especialist/priscila.html'
     }
   };
@@ -213,7 +221,6 @@ if (y) y.textContent = new Date().getFullYear();
 
   const open = (id) => {
     const s = DATA[id];
-    console.log("🚀 ~ open ~ s:", s)
     if (!s) return;
 
     $img.src = s.img;

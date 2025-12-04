@@ -7,7 +7,7 @@
     <title>Empleo en Delitiāre — Men’s Spa</title>
     <meta
       name="description"
-      content="Únete al equipo de Delitiāre Men’s Spa. Vacantes para terapeutas y personal de concierge en CDMX."
+      content="Delitiāre — Un espacio digno, libre y seguro para masajistas. Trabaja con libertad, respeto y armonía en CDMX."
     />
 
     <!-- Canonical -->
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Empleo en Delitiāre — Men’s Spa" />
     <meta
       property="og:description"
-      content="Forma parte de un spa masculino premium en CDMX."
+      content="Delitiāre: un lugar donde tu libertad y tu talento se encuentran. Vacantes para masajistas en zonas premium de CDMX."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://delitiare.mx/empleo.html" />
@@ -26,190 +26,258 @@
       content="https://delitiare.mx/assets/og/cover.jpg"
     />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Empleo en Delitiāre — Men’s Spa" />
-    <meta
-      name="twitter:description"
-      content="Vacantes para especialistas y staff de spa en CDMX."
-    />
-    <meta
-      name="twitter:image"
-      content="https://delitiare.mx/assets/og/cover.jpg"
-    />
-
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS exclusivo de empleo -->
+    <link rel="stylesheet" href="./empleo.css" />
 
-    <!-- Favicons -->
+    <!-- Favicons (opcional, puedes apuntar a los mismos que en index) -->
     <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
-    <link rel="manifest" href="./assets/icons/manifest.webmanifest" />
     <meta name="theme-color" content="#0e0f12" />
   </head>
   <body>
-    <!-- Header unificado -->
-    <header>
+    <!-- HEADER -->
+    <header class="site-header">
       <div class="container nav">
         <a class="brand" href="./index.html#home" aria-label="Delitiāre inicio">
-          <img class="mark" src="./assets/delitiare-logo.png" alt="Delitiāre" />
-          <span class="title">
-            <span class="name">Delitiāre</span><br />
-            <span class="tag">MEN’S SPA</span>
+          <img
+            class="brand-mark"
+            src="./assets/delitiare-logo.png"
+            alt="Delitiāre"
+          />
+          <span class="brand-text">
+            <span class="brand-name">Delitiāre</span>
+            <span class="brand-tagline">MEN’S SPA</span>
           </span>
         </a>
 
-        <nav>
-          <div class="links">
-            <a class="btn" href="./index.html#rituales">Rituales</a>
-            <a class="btn" href="./index.html#especialistas">Especialistas</a>
-            <a class="btn" href="./index.html#valor-experiencia">Valor de experiencia</a>
-            <a class="btn" href="./index.html#experiencia">Experiencia</a>
-            <a class="btn btn-solid" href="./index.html#contacto">Contacto</a>
-          </div>
-          <button class="hamb" id="hamb" aria-label="Abrir menú">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
+        <nav class="nav-links">
+          <a href="./index.html#rituales" class="btn btn-link">Rituales</a>
+          <a href="./index.html#especialistas" class="btn btn-link"
+            >Especialistas</a
+          >
+          <a href="./index.html#valor-experiencia" class="btn btn-link"
+            >Valor de experiencia</a
+          >
+          <a href="./index.html#experiencia" class="btn btn-link">Experiencia</a>
         </nav>
+
+        <button
+          class="hamb"
+          id="hamb"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
 
-      <!-- Drawer igual que en index pero apuntando al home -->
-      <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú">
-        <div class="container" style="padding:10px 20px 18px">
+      <!-- Drawer móvil -->
+      <div class="drawer" id="drawer" aria-hidden="true">
+        <div class="drawer-inner">
           <a href="./index.html#rituales">Rituales</a>
           <a href="./index.html#especialistas">Especialistas</a>
           <a href="./index.html#valor-experiencia">Valor de experiencia</a>
           <a href="./index.html#experiencia">Experiencia</a>
-          <a href="./index.html#contacto">Contacto</a>
-          <a class="btn" href="./index.html#contacto" style="margin-top:6px">Reservar</a>
         </div>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container" style="max-width: 760px">
-        <h1
-          class="font-display gold-gradient"
-          style="font-size: clamp(32px, 4vw, 52px); margin: 0 0 18px"
-        >
-          Únete a Delitiāre
-        </h1>
-        <p style="opacity: 0.85; margin-bottom: 20px">
-          Buscamos especialistas y personal de concierge que vibren con el
-          servicio discreto, el tacto profesional y la calidez humana.
-        </p>
-
-        <section class="card reveal" style="padding: 20px; margin-bottom: 18px">
-          <h2 class="font-display" style="font-size: 26px; margin-top: 0">
-            Vacante: Especialista en masajes
-          </h2>
-          <ul style="opacity: 0.9; margin: 10px 0 14px; padding-left: 18px">
-            <li>
-              Experiencia en masajes de relajación o spa (no es necesario
-              cédula, pero sí vocación y profesionalismo).
-            </li>
-            <li>Excelente presentación y actitud de servicio.</li>
-            <li>Disponibilidad para rolar turnos.</li>
-          </ul>
-          <p style="opacity: 0.85; margin-bottom: 10px">
-            Si te interesa, envíanos tu CV o perfil (Instagram profesional,
-            portafolio, etc.) a:
+    <!-- MAIN -->
+    <main>
+      <!-- Hero -->
+      <section class="section hero">
+        <div class="container">
+          <p class="kicker">EMPLEO · ESPECIALISTAS</p>
+          <h1 class="hero-title">
+            Delitiāre — Donde tu talento encuentra un lugar digno, libre y
+            luminoso
+          </h1>
+          <p class="hero-lead">
+            En Delitiāre creemos que una masajista no solo trabaja con las
+            manos, sino con el alma. Eres presencia, intuición, energía… y
+            mereces un espacio donde tu esencia no se desgaste, sino que
+            florezca.
           </p>
-          <a
-            class="priv-terms"
-            href="mailto:empleo@delitiare.mx?subject=Vacante%20Especialista%20Delitiare"
-          >
-            empleo@delitiare.mx
-          </a>
-        </section>
+        </div>
+      </section>
 
-      </div>
+      <!-- Manifiesto -->
+      <section class="section">
+        <div class="container narrow">
+          <article class="card">
+            <p>
+              Aquí, cada especialista es una mujer que elige su camino con
+              libertad. Honramos tu tiempo, tus límites y tu historia. Nadie te
+              pertenece y nadie decide por ti: en Delitiāre, tu autonomía es
+              ley.
+            </p>
+            <p class="card-strong">
+              También queremos dejar algo claro desde el inicio:
+            </p>
+            <p>
+              En Delitiāre no existe el blackmailing, la extorsión, humillación,
+              el abuso, ni la manipulación emocional.
+              <strong>NO ERES DE NUESTRA PROPIEDAD, NO ERES ESCLAVA.</strong>
+            </p>
+            <p>
+              Tu información, tus fotos y tus datos personales son tuyos; nunca
+              serán compartidos con clientes ni con terceros. Y si algún día
+              decides retirarte, todo tu material será eliminado de forma
+              definitiva, sin condiciones ni represalias.
+            </p>
+          </article>
+
+          <article class="card">
+            <p>
+              Buscamos construir un refugio profesional donde puedas trabajar en
+              paz, sin presiones, sin sombras y sin miedo.
+            </p>
+            <p>
+              Un lugar donde la armonía entre compañeras sea real, donde la
+              competencia se convierte en respeto y donde cada mujer puede
+              sentirse segura, valorada y dueña de su destino.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Requisitos -->
+      <section class="section">
+        <div class="container narrow">
+          <article class="card">
+            <h2 class="card-title">
+              Lo esencial para integrarte a Delitiāre
+            </h2>
+            <p>
+              Solo pedimos lo necesario para que puedas trabajar de manera
+              profesional y elevar tu propio servicio:
+            </p>
+            <ul class="card-list">
+              <li>Buena presentación.</li>
+              <li>Si cuentas con camilla, es un plus importante.</li>
+              <li>Contar con lugar propio suma a tu independencia.</li>
+              <li>
+                Book de fotos para mostrar tu trabajo con elegancia y seriedad.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Propuesta y zonas -->
+      <section class="section">
+        <div class="container narrow">
+          <article class="card">
+            <p>
+              Con horarios totalmente libres y la posibilidad de generar
+              <strong>$25,000 a $50,000 mensuales</strong>, Delitiāre es un
+              espacio pensado para mujeres que desean crecer en equilibrio: con
+              elegancia, serenidad y propósito.
+            </p>
+            <p>
+              Operamos en zonas premium —
+              <strong>Polanco, Santa Fe y La Roma</strong> — porque tu labor
+              merece un escenario digno, seguro y de alto nivel.
+            </p>
+            <p>
+              Si buscas un ambiente donde tu luz no solo brille, sino que sea
+              cuidada…
+            </p>
+            <p>
+              Si quieres un trabajo que respete tu cuerpo, tu energía, tu tiempo
+              y tu camino…
+            </p>
+            <p class="card-strong">
+              Delitiāre puede ser tu próximo hogar profesional.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Cierre + CTA -->
+      <section class="section section-cta">
+        <div class="container narrow">
+          <article class="card card-cta">
+            <p>
+              Aquí no venimos a explotarte. Venimos a acompañarte, a impulsarte
+              y a devolverte el valor que el mundo a veces olvida darte.
+            </p>
+            <p class="card-strong">
+              Delitiāre: un lugar donde tu libertad y tu talento se encuentran.
+            </p>
+
+            <div class="cta-box">
+              <h2 class="card-title">¿Te gustaría integrarte a Delitiāre?</h2>
+              <p>Envíanos tu información para conocerte mejor:</p>
+              <ul class="card-list">
+                <li>Nombre y forma de contacto.</li>
+                <li>
+                  Zona donde trabajas (Polanco, Santa Fe, La Roma u otra
+                  cercana).
+                </li>
+                <li>Breve resumen de tu experiencia.</li>
+                <li>
+                  Book de fotos profesional o tu perfil donde muestres tu
+                  trabajo.
+                </li>
+              </ul>
+
+              <p class="cta-contact">
+                Escríbenos a
+                <a
+                  href="mailto:empleo@delitiare.mx?subject=Quiero%20integrarme%20a%20Delitiare"
+                  >empleo@delitiare.mx</a
+                >
+              </p>
+
+              <a
+                class="btn btn-solid"
+                href="https://wa.me/525566275081?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20empleo%20en%20Deliti%C4%81re."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Postularme por WhatsApp
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer + modales igual que en index -->
-    <footer>
-      <div
-        class="container"
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 16px;
-          flex-wrap: wrap;
-        "
-      >
-        <div style="opacity: 0.75; font-size: 14px">
-          © <span id="y"></span> Delitiāre Men’s Spa
-        </div>
-        <div style="display: flex; gap: 16px; opacity: 0.85; font-size: 14px">
-          <button
-            id="open-privacy-3"
-            class="priv-terms"
-            style="background: none; border: 0; padding: 0; cursor: pointer"
-          >
-            Aviso de privacidad
-          </button>
-          <button
-            id="open-terms-3"
-            class="priv-terms"
-            style="background: none; border: 0; padding: 0; cursor: pointer"
-          >
-            Términos y condiciones
-          </button>
-          <a class="priv-terms" href="./empleo.html">Empleo</a>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">
+          © <span id="year"></span> Delitiāre Men’s Spa
+        </p>
+        <div class="footer-links">
+          <a href="./empleo.html" class="footer-link">Empleo</a>
         </div>
       </div>
     </footer>
 
-    <!-- Modales reutilizados -->
-    <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
-      <div class="modal__dialog" role="document">
-        <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
-        <h3 id="privacy-title" class="font-display modal__title">Aviso de privacidad</h3>
-        <div class="modal__body">
-          <p>
-            Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
-            Puedes solicitar acceso, rectificación o supresión escribiendo a
-            <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
-          </p>
-        </div>
-        <div class="modal__footer">
-          <button class="btn" type="button" data-close>Cerrar</button>
-        </div>
-      </div>
-    </div>
+    <script>
+      // Año actual en el footer
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
 
-    <div id="modal-terms" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="terms-title">
-      <div class="modal__dialog" role="document">
-        <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
-        <h3 id="terms-title" class="font-display modal__title">Términos y condiciones</h3>
-        <div class="modal__body">
-          <ul>
-            <li>Reservas sujetas a disponibilidad. Cancelaciones con 12h de anticipación.</li>
-            <li>Pago en sitio. Propinas no incluidas.</li>
-            <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
-          </ul>
-        </div>
-        <div class="modal__footer">
-          <button class="btn" type="button" data-close>Cerrar</button>
-        </div>
-      </div>
-    </div>
+      // Toggle del menú móvil
+      const hamb = document.getElementById("hamb");
+      const drawer = document.getElementById("drawer");
 
-    <script src="./js/header.js" defer></script>
-    <script src="./js/forms-and-modals.js" defer></script>
-    <script src="./js/wa-links.js" defer></script>
+      hamb.addEventListener("click", () => {
+        const open = drawer.getAttribute("aria-hidden") === "false";
+        drawer.setAttribute("aria-hidden", open ? "true" : "false");
+        hamb.setAttribute("aria-expanded", open ? "false" : "true");
+        drawer.classList.toggle("drawer-open", !open);
+      });
+    </script>
   </body>
 </html>

@@ -58,7 +58,7 @@
           <a class="btn" href="#especialistas">Especialistas</a>
           <a class="btn" href="#valor-experiencia">Valor de experiencia</a>
           <a class="btn" href="#experiencia">Experiencia</a>
-          <a class="btn btn-solid" href="#contacto">Contacto</a>
+          <a class="btn btn-solid"" href="./empleo.html">Empleo</a>
         </div>
         <button class="hamb" id="hamb" aria-label="Abrir menú">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -77,8 +77,7 @@
         <a href="#especialistas">Especialistas</a>
         <a href="#valor-experiencia">Valor de experiencia</a>
         <a href="#experiencia">Experiencia</a>
-        <a href="#contacto">Contacto</a>
-        <a class="btn" href="#contacto" style="margin-top:6px">Reservar</a>
+        <a class="btn" href="./empleo.html">Empleo</a>
       </div>
     </div>
   </header>
@@ -219,12 +218,12 @@
           </div>
         </button>
 
-        <button class="card reveal specialist-card" data-specialist="sally" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+        <button class="card reveal specialist-card" data-specialist="priscila" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
           <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-            <img src="./assets/specialists/Sally/Fotoprincipal.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
+            <img src="./assets/specialists/Priscila/01-priscila.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-            <strong class="font-display" style="letter-spacing:.02em">Sally</strong>
+            <strong class="font-display" style="letter-spacing:.02em">Priscila</strong>
             <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
           </div>
         </button>
@@ -248,7 +247,7 @@
             data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
             data-wa-var-ritual="Essentia"
             style="margin-top:auto"
-          >Contacto</a>
+          >Agenda</a>
         </div>
         <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
           <div class="font-display" style="font-size:26px">Sensus</div>
@@ -261,7 +260,7 @@
             data-wa-text="Hola, quiero reservar el ritual {{ritual}}"
             data-wa-var-ritual="Sensus"
             style="margin-top:auto"
-          >Contacto</a>
+          >Agenda</a>
         </div>
         <div class="card reveal" style="padding:20px;display:flex;flex-direction:column;gap:8px">
           <div class="font-display" style="font-size:26px">Deep</div>
@@ -274,7 +273,7 @@
             data-wa-text="Hola, quiero reservar un ritual {{ritual}}"
             data-wa-var-ritual="Deep"
             style="margin-top:auto"
-          >Contacto</a>
+          >Agenda</a>
         </div>
       </div>
     </div>
@@ -349,25 +348,118 @@
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div style="opacity:.75;font-size:14px">© <span id="y"></span> Delitiāre Men’s Spa</div>
       <div style="display:flex;gap:16px;opacity:.85;font-size:14px">
-        <button id="open-privacy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
+        <button id="open-privacy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad y protección de datos</button>
         <button id="open-terms-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
-        <a class="priv-terms" href="./empleo.html">Empleo</a>
+        <button id="open-rules-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Reglamento del servicio</button>
+        <button id="open-policy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Política de uso del sitio</button>
       </div>
     </div>
   </footer>
 
-  <!-- Modal: Aviso de privacidad -->
-  <div id="modal-privacy" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
+  <!-- Modal: Aviso de privacidad y protección de datos -->
+  <div
+    id="modal-privacy"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="privacy-title"
+  >
     <div class="modal__dialog" role="document">
       <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
-      <h3 id="privacy-title" class="font-display modal__title">Aviso de privacidad</h3>
+
+      <h3 id="privacy-title" class="font-display modal__title">
+        Aviso de privacidad y protección de datos
+      </h3>
+
       <div class="modal__body">
         <p>
-          Tu información se usa únicamente para gestionar tu reserva y comunicarte beneficios de Delitiāre.
-          Puedes solicitar acceso, rectificación o supresión escribiendo a
-          <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>.
+          <strong>Delitiāre Men’s Spa</strong>, con domicilio en Ciudad de México, es responsable
+          del tratamiento de los datos personales recabados a través de este sitio web,
+          WhatsApp y cualquier medio electrónico o físico relacionado con la prestación
+          de nuestros servicios. Este aviso se emite en cumplimiento con la
+          <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>.
+        </p>
+
+        <hr />
+
+        <h4>1. Datos personales que recabamos</h4>
+        <p>Los datos personales solicitados al cliente pueden incluir:</p>
+        <ul>
+          <li>Nombre (completo o parcial, según preferencia del cliente).</li>
+          <li>Teléfono.</li>
+          <li>Dirección (para servicios a domicilio).</li>
+          <li>Correo electrónico (en reseñas u otros formularios).</li>
+        </ul>
+        <p>
+          Delitiāre Men’s Spa no recaba datos sensibles, salvo aquellos que el cliente comparta voluntariamente con fines de personalización del servicio (como lesiones, molestias físicas o restricciones de salud).
+        </p>
+
+        <hr />
+
+        <h4>2. Finalidades del tratamiento</h4>
+        <p>Los datos personales serán utilizados para:</p>
+        <ul>
+          <li>Agendar, confirmar o modificar citas.</li>
+          <li>Proporcionar y personalizar los servicios contratados.</li>
+          <li>Gestionar pagos y comprobantes.</li>
+          <li>Dar seguimiento a reseñas, opiniones o atención al cliente.</li>
+          <li>Mantener comunicación referente al servicio.</li>
+          <li>Mejorar la calidad de atención y servicios del spa.</li>
+        </ul>
+
+        <hr />
+
+        <h4>3. Transferencia de datos</h4>
+        <p>
+          Delitiāre Men’s Spa <strong>no comparte, vende ni transfiere</strong> datos personales a terceros,
+          salvo por requerimientos legales de autoridades competentes.
+        </p>
+
+        <hr />
+
+        <h4>4. Medidas de seguridad</h4>
+        <p>
+          Se implementan medidas administrativas, técnicas y físicas para proteger los datos personales contra daño, pérdida, alteración, destrucción o uso no autorizado.
+        </p>
+
+        <hr />
+
+        <h4>5. Derechos ARCO</h4>
+        <p>
+          El cliente puede ejercer sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición</strong>
+          enviando una solicitud por WhatsApp o al correo electrónico proporcionado para este fin.
+        </p>
+        <p>La solicitud deberá incluir:</p>
+        <ul>
+          <li>Nombre del titular.</li>
+          <li>Descripción clara del derecho que desea ejercer.</li>
+          <li>Medio para recibir notificaciones.</li>
+        </ul>
+
+        <hr />
+
+        <h4>6. Revocación del consentimiento</h4>
+        <p>
+          El cliente puede solicitar la revocación del consentimiento para el uso de sus datos en cualquier momento.
+          La revocación no tendrá efectos retroactivos.
+        </p>
+
+        <hr />
+
+        <h4>7. Cambios al aviso de privacidad</h4>
+        <p>
+          Cualquier modificación a este Aviso de Privacidad será publicada en este mismo sitio web,
+          en la sección donde se encuentra este documento.
+        </p>
+
+        <p style="margin-top:14px;">
+          Para dudas o aclaraciones, puedes escribir a:
+          <br />
+          <a class="priv-terms" href="mailto:datos@delitiare.mx">datos@delitiare.mx</a>
         </p>
       </div>
+
       <div class="modal__footer">
         <button class="btn" type="button" data-close>Cerrar</button>
       </div>
@@ -386,6 +478,218 @@
           <li>Experiencias diseñadas para adultos. Nos reservamos el derecho de admisión.</li>
         </ul>
       </div>
+      <div class="modal__footer">
+        <button class="btn" type="button" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Reglamento del servicio -->
+  <div
+    id="modal-rules"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="rules-title"
+  >
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+      <h3 id="rules-title" class="font-display modal__title">
+        Reglamento del servicio
+      </h3>
+
+      <div class="modal__body">
+        <p>
+          Para garantizar una experiencia profesional, segura y respetuosa,
+          <strong>Delitiāre Men’s Spa</strong> establece el siguiente reglamento de servicio:
+        </p>
+
+        <hr />
+
+        <h4>1. Conducta</h4>
+        <ul>
+          <li>
+            El cliente deberá mantener un comportamiento respetuoso hacia la masajista en todo momento.
+          </li>
+          <li>
+            No se permiten solicitudes, insinuaciones ni actos de índole sexual ajenos al masaje sensorial profesional.
+          </li>
+          <li>
+            Cualquier conducta inapropiada será motivo de terminación inmediata del servicio sin reembolso.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h4>2. Higiene personal</h4>
+        <p>
+          El cliente deberá presentarse limpio y con higiene adecuada antes de iniciar la sesión.
+        </p>
+
+        <hr />
+
+        <h4>3. Puntualidad</h4>
+        <ul>
+          <li>
+            Los retrasos por parte del cliente disminuirán proporcionalmente el tiempo de la sesión.
+          </li>
+          <li>
+            En caso de retraso con aviso previo, se intentará ajustar la logística; de no ser posible,
+            deberá reagendarse la cita.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h4>4. Servicios a domicilio</h4>
+        <ul>
+          <li>
+            El tiempo de la sesión inicia al momento en que la masajista llega al domicilio proporcionado.
+          </li>
+          <li>
+            El cliente deberá tener el espacio listo y organizado.
+          </li>
+          <li>
+            El cliente cubrirá el costo del Uber de ida y vuelta de la masajista.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h4>5. Cancelaciones</h4>
+        <ul>
+          <li>
+            Deben realizarse con al menos <strong>5 horas</strong> de anticipación.
+          </li>
+          <li>
+            Las cancelaciones tardías o la inasistencia se consideran servicio tomado.
+          </li>
+        </ul>
+
+        <hr />
+
+        <h4>6. Pago</h4>
+        <p>Aceptamos pago en:</p>
+        <ul>
+          <li>MXN</li>
+          <li>USD</li>
+          <li>EUR</li>
+          <li>Tarjeta</li>
+          <li>Pago en línea</li>
+        </ul>
+        <p>
+          En pagos con divisas, el cliente deberá cubrir la comisión bancaria generada por el cambio de moneda.
+        </p>
+
+        <hr />
+
+        <h4>7. Salud</h4>
+        <p>
+          El cliente deberá informar sobre lesiones, condiciones médicas o situaciones particulares que
+          puedan influir en la prestación del servicio. Delitiāre Men’s Spa no se hace responsable por
+          afectaciones generadas por información incompleta u omitida.
+        </p>
+
+        <hr />
+
+        <h4>8. Reservaciones</h4>
+        <ul>
+          <li>
+            La disponibilidad de los servicios dependerá exclusivamente de la agenda de la especialista asignada.
+          </li>
+          <li>
+            Se recomienda realizar la reservación con al menos <strong>4 horas</strong> de anticipación
+            para garantizar disponibilidad.
+          </li>
+          <li>
+            Para agendar una cita se requiere un anticipo de <strong>$500 MXN</strong>, mismo que será
+            descontado del total del servicio contratado.
+          </li>
+          <li>
+            El pago completo del masaje deberá realizarse <strong>SIEMPRE</strong> al inicio de la sesión,
+            sin excepción.
+          </li>
+          <li>
+            Las citas se gestionan y confirman únicamente vía <strong>WhatsApp</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn" type="button" data-close>Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Política de uso del sitio -->
+  <div
+    id="modal-policy"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="policy-title"
+  >
+    <div class="modal__dialog" role="document">
+      <button class="modal__close" type="button" aria-label="Cerrar" data-close>×</button>
+
+      <h3 id="policy-title" class="font-display modal__title">
+        Política de uso del sitio
+      </h3>
+
+      <div class="modal__body">
+        <p>
+          El uso del sitio web de <strong>Delitiāre Men’s Spa</strong> implica la aceptación plena de esta Política de Uso.
+          Si el usuario no está de acuerdo, deberá abstenerse de utilizar el sitio.
+        </p>
+
+        <hr />
+
+        <h4>1. Uso permitido</h4>
+        <p>El usuario se compromete a utilizar el sitio únicamente para:</p>
+        <ul>
+          <li>Consultar información sobre los servicios del spa.</li>
+          <li>Reservar citas o solicitar información mediante los formularios disponibles.</li>
+          <li>Emitir reseñas o comentarios de manera respetuosa.</li>
+        </ul>
+
+        <hr />
+
+        <h4>2. Uso prohibido</h4>
+        <p>Queda estrictamente prohibido:</p>
+        <ul>
+          <li>Solicitar servicios que no correspondan a la oferta del spa.</li>
+          <li>Enviar contenido ofensivo, inapropiado, sexual, discriminatorio o violento.</li>
+          <li>Interferir con el funcionamiento del sitio o intentar acceder a áreas restringidas.</li>
+          <li>Utilizar la información del sitio con fines comerciales no autorizados.</li>
+        </ul>
+
+        <hr />
+
+        <h4>3. Propiedad intelectual</h4>
+        <p>
+          Todos los textos, fotografías, diseños, logotipos, marcas y contenidos del sitio son propiedad exclusiva
+          de <strong>Delitiāre Men’s Spa</strong>. Queda prohibida su reproducción total o parcial sin autorización por escrito.
+        </p>
+
+        <hr />
+
+        <h4>4. Enlaces externos</h4>
+        <p>
+          Este sitio puede contener enlaces a páginas de terceros. Delitiāre Men’s Spa no se hace responsable
+          de la información, contenidos o términos de dichos sitios.
+        </p>
+
+        <hr />
+
+        <h4>5. Modificaciones al sitio</h4>
+        <p>
+          Delitiāre Men’s Spa se reserva el derecho de modificar o actualizar el contenido del sitio en cualquier
+          momento y sin previo aviso.
+        </p>
+      </div>
+
       <div class="modal__footer">
         <button class="btn" type="button" data-close>Cerrar</button>
       </div>
