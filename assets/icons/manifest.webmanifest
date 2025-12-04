@@ -1,0 +1,70 @@
+{
+  "name": "Delitiāre — Men’s Spa",
+  "short_name": "Delitiāre",
+  "lang": "es-MX",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e0f12",
+  "theme_color": "#d6b86a",
+  "description": "Spa premium para caballeros en CDMX. Rituales de relajación discreta y personalizada.",
+  "icons": [
+    {
+      "src": "/assets/icons/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/android-icon-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Reservar sesión",
+      "short_name": "Reservar",
+      "url": "/?wa-reservar",
+      "description": "Agendar una sesión por WhatsApp."
+    },
+    {
+      "name": "Especialistas",
+      "short_name": "Especialistas",
+      "url": "/especialistas/",
+      "description": "Ver el perfil de nuestras especialistas."
+    },
+    {
+      "name": "Vivían",
+      "short_name": "Vivían",
+      "url": "/especialist/vivian.html",
+      "description": "Ir directo al perfil de Vivían."
+    }
+  ]
+}

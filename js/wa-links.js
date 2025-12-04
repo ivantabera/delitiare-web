@@ -1,6 +1,6 @@
 // js/wa-links.js
 (() => {
-  const DEFAULT_PHONE = "525566275081"; // puedes cambiarlo si quieres otro por defecto
+  const DEFAULT_PHONE = "523342874709"; // puedes cambiarlo si quieres otro por defecto
 
   function buildWaUrl(phone, text) {
     const cleanPhone = String(phone || "").replace(/\D/g, "");
