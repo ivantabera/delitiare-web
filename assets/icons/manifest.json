@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "Delitiāre — Men’s Spa",
   "short_name": "Delitiāre",
   "lang": "es-MX",
@@ -9,12 +10,13 @@
   "background_color": "#0e0f12",
   "theme_color": "#d6b86a",
   "description": "Spa premium para caballeros en CDMX. Rituales de relajación discreta y personalizada.",
+
   "icons": [
     {
       "src": "/assets/icons/app-icon.png",
       "sizes": "1024x1024",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "/assets/icons/android-icon-192x192.png",
@@ -47,24 +49,77 @@
       "type": "image/png"
     }
   ],
+
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/home-desktop-1280x720.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Inicio de Delitiāre en escritorio"
+    },
+    {
+      "src": "/assets/screenshots/tess-desktop-1280x720.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Perfil de especialista en escritorio"
+    },
+    {
+      "src": "/assets/screenshots/home-mobile-720x1280.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Inicio de Delitiāre en móvil"
+    },
+    {
+      "src": "/assets/screenshots/tess-mobile-720x1280.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Perfil de especialista en móvil"
+    }
+  ],
+
   "shortcuts": [
     {
       "name": "Reservar sesión",
       "short_name": "Reservar",
       "url": "/?wa-reservar",
-      "description": "Agendar una sesión por WhatsApp."
+      "description": "Agendar una sesión por WhatsApp.",
+      "icons": [
+        {
+          "src": "/assets/icons/android-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Especialistas",
       "short_name": "Especialistas",
       "url": "/especialistas/",
-      "description": "Ver el perfil de nuestras especialistas."
+      "description": "Ver el perfil de nuestras especialistas.",
+      "icons": [
+        {
+          "src": "/assets/icons/android-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     },
     {
-      "name": "Vivían",
-      "short_name": "Vivían",
-      "url": "/especialist/vivian.html",
-      "description": "Ir directo al perfil de Vivían."
+      "name": "Tess",
+      "short_name": "Tess",
+      "url": "/especialist/tess.html",
+      "description": "Ir directo al perfil de Tess.",
+      "icons": [
+        {
+          "src": "/assets/icons/android-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
