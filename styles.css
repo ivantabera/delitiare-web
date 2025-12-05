@@ -592,3 +592,136 @@ a.priv-terms:hover {
   margin-top: 8px;
 }
 
+/* ===== FAQ (Preguntas frecuentes) ===== */
+
+.faq-hero {
+  padding-top: 96px; /* compensa header fijo */
+  padding-bottom: 40px;
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(214, 184, 106, 0.16), transparent 60%),
+    linear-gradient(180deg, #0e0f12, #0b0c0e);
+}
+
+.faq-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(214, 184, 106, 0.14);
+  color: var(--champagne);
+}
+
+.faq-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--champagne);
+}
+
+.faq-title {
+  margin: 16px 0 6px;
+  font-size: clamp(26px, 4vw, 34px);
+}
+
+.faq-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(246, 243, 238, 0.78);
+  max-width: 540px;
+}
+
+.faq-wrapper {
+  margin-top: 28px;
+}
+
+.faq-card {
+  padding: 22px 18px 22px;
+}
+
+@media (min-width: 768px) {
+  .faq-card {
+    padding: 26px 26px 26px;
+  }
+}
+
+.faq-intro {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: rgba(246, 243, 238, 0.82);
+}
+
+.faq-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+details.faq-item {
+  border-radius: 16px;
+  border: 1px solid rgba(214, 184, 106, 0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 184, 106, 0.06),
+    rgba(214, 184, 106, 0.02)
+  );
+  padding: 10px 12px;
+  margin-top: 10px;
+}
+
+details.faq-item[open] {
+  border-color: rgba(214, 184, 106, 0.6);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+
+summary.faq-question {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+summary.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-number {
+  font-size: 12px;
+  color: var(--champagne);
+  margin-top: 2px;
+  min-width: 22px;
+}
+
+.faq-q-text {
+  font-weight: 600;
+}
+
+.faq-answer {
+  margin: 8px 0 4px 22px;
+  font-size: 13px;
+  color: rgba(246, 243, 238, 0.85);
+  line-height: 1.6;
+}
+
+.faq-footnote {
+  margin-top: 18px;
+  font-size: 12px;
+  color: rgba(246, 243, 238, 0.72);
+}
+
+.faq-cta {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.faq-cta .btn {
+  font-size: 13px;
+}

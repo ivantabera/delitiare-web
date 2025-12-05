@@ -157,7 +157,6 @@
           <a class="btn" href="#rituales">Rituales</a>
           <a class="btn" href="#especialistas">Especialistas</a>
           <a class="btn" href="#valor-experiencia">Valor de experiencia</a>
-          <a class="btn" href="#experiencia">Experiencia</a>
           <a class="btn btn-solid"" href="./empleo.html">Empleo</a>
         </div>
         <button class="hamb" id="hamb" aria-label="Abrir menú">
@@ -176,7 +175,6 @@
         <a href="#rituales">Rituales</a>
         <a href="#especialistas">Especialistas</a>
         <a href="#valor-experiencia">Valor de experiencia</a>
-        <a href="#experiencia">Experiencia</a>
         <a class="btn" href="./empleo.html">Empleo</a>
       </div>
     </div>
@@ -276,16 +274,6 @@
     <div class="container">
       <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 22px">ESPECIALISTAS</h2>
       <div class="grid cols-4">
-        <!-- Card: Vivían -->
-        <button class="card reveal specialist-card" data-specialist="vivian" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-            <img src="./assets/specialists/Vivian/Fotoprincipal.jpeg" alt="Especialista Vivían" style="width:100%;height:100%;object-fit:cover;display:block" />
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-            <strong class="font-display" style="letter-spacing:.02em">Vivían</strong>
-            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
-          </div>
-        </button>
 
         <!-- Placeholder cards -->
         <button class="card reveal specialist-card" data-specialist="tess" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
@@ -294,6 +282,27 @@
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
             <strong class="font-display" style="letter-spacing:.02em">Tess</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
+
+        <button class="card reveal specialist-card" data-specialist="priscila" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Priscila/04-priscila.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Priscila</strong>
+            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
+          </div>
+        </button>
+
+        <!-- Card: Vivían -->
+        <button class="card reveal specialist-card" data-specialist="vivian" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
+          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
+            <img src="./assets/specialists/Vivian/Fotoprincipal.jpeg" alt="Especialista Vivían" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+            <strong class="font-display" style="letter-spacing:.02em">Vivían</strong>
             <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
           </div>
         </button>
@@ -318,15 +327,7 @@
           </div>
         </button>
 
-        <button class="card reveal specialist-card" data-specialist="priscila" style="padding:16px; background:none; border:none; text-align:inherit; cursor:pointer">
-          <div style="aspect-ratio:16/9;border-radius:14px;background:linear-gradient(180deg,rgba(42,58,52,.8),rgba(14,15,18,.9));display:grid;place-items:center">
-            <img src="./assets/specialists/Priscila/01-priscila.jpeg" alt="Especialista Catalina" style="width:100%;height:100%;object-fit:cover;display:block" />
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
-            <strong class="font-display" style="letter-spacing:.02em">Priscila</strong>
-            <span class="badge"><p class="font-display" style="letter-spacing:.02em">Ver perfil</p></span>
-          </div>
-        </button>
+        
       </div>
     </div>
   </section>
@@ -380,7 +381,7 @@
   </section>
 
   <!-- Experiencia -->
-  <section id="experiencia" class="section" style="background:rgba(0,0,0,.3)">
+  <!-- <section id="experiencia" class="section" style="background:rgba(0,0,0,.3)">
     <div class="container" style="display:grid;gap:28px;grid-template-columns:1fr;align-items:center">
       <div class="reveal">
         <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 12px">Experiencia</h2>
@@ -393,7 +394,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Contacto -->
   <section id="contacto" class="section">
@@ -452,6 +453,7 @@
         <button id="open-terms-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
         <button id="open-rules-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Reglamento del servicio</button>
         <button id="open-policy-3" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Política de uso del sitio</button>
+        <a class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer" href="./preguntas-frecuentes.html">FAQ</a>
       </div>
     </div>
   </footer>

@@ -199,13 +199,13 @@ if (y) y.textContent = new Date().getFullYear();
     },
     sally: {
       name: 'Sally',
-      img: 'assets/specialists/Sally/01-sally.jpeg',
+      img: 'assets/specialists/Sally/02-sally-auxiliar.jpeg',
       desc: 'Dulce, coqueta y encantadora. El toque cálido de Sally despierta sensaciones profundas que te invitan a explorar placeres nuevos.',
       link: 'especialist/sally.html'
     },
     priscila: {
       name: 'Priscila',
-      img: 'assets/specialists/Priscila/02-priscila.jpeg',
+      img: 'assets/specialists/Priscila/Fotoprincipal.jpeg',
       desc: 'Carisma, alegría y energía amazónica que despierta todos tus sentidos. Pris transforma cada sesión en un viaje atrevido hacia nuevas sensaciones.',
       link: 'especialist/priscila.html'
     }
