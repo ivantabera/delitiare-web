@@ -200,9 +200,9 @@
           <span class="gold-gradient">Delitiāre</span>
           <span style="display:block;color:rgba(255,255,255,.9)">Delicia para los sentidos</span>
         </h1>
-        <p style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px">
-          Un santuario masculino donde el lujo es silencioso: rituales de relajación profunda, tacto experto y detalles dorados que encienden los sentidos.
-        </p>
+        <h2 style="max-width: 620px; opacity:.85; font-size:18px; margin:14px 0 28px; font-weight:400;">
+          Un santuario masculino donde el lujo es silencioso: rituales de bienestar, tacto experto y un ambiente pensado para relajarte por completo.
+        </h2>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn btn-solid" href="#rituales">Ver rituales</a>
           <a 
@@ -214,17 +214,43 @@
           >Reservar ahora</a>
         </div>
       </div>
-      <div class="panel card reveal">
+      
+      <div class="panel card reveal hero-panel">
         <div class="panel-inner">
-          <div style="text-align:center; padding:32px">
-            <div style="width:68px;height:68px;border-radius:50%;border:1px solid rgba(214,184,106,.45);display:grid;place-items:center;margin:0 auto 14px auto">
-              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="var(--champagne)" stroke-width="1.6"><path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"/></svg>
+          <div class="hero-panel-content">
+            <!-- Icono -->
+            <div class="hero-panel-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="var(--champagne)" stroke-width="1.6">
+                <path d="M12 2C12 9 7 12 7 17a5 5 0 0 0 10 0c0-5-5-8-5-15z"></path>
+              </svg>
             </div>
-            <div class="font-display" style="font-size:28px">Men’s Spa</div>
-            <div style="opacity:.8;margin-top:6px">Calma dorada · Verde profundo</div>
+
+            <!-- Título -->
+            <h2 class="hero-panel-title font-display">
+              Experiencia privada y discreta
+            </h2>
+
+            <!-- Bullets -->
+            <ul class="hero-panel-bullets">
+              <li>Atención personalizada para caballeros.</li>
+              <li>Ubicación en zona Polanco.</li>
+              <li>Sesiones solo con cita previa.</li>
+            </ul>
+            <!-- CTA -->
+            <div class="hero-panel-cta">
+              <a
+                class="btn btn-solid"
+                data-wa
+                data-wa-phone="3342874709"
+                data-wa-text="Hola, me gustaría reservar un masaje en Delitiāre. ¿Me podrían brindar información, por favor?"
+              >
+                Reservar por WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    
     </div>
   </main>
 
@@ -824,5 +850,6 @@
   <script src="./js/carousel.js" defer></script>
   <script src="./js/forms-and-modals.js" defer></script>
   <script src="./js/wa-links.js" defer></script>
+  <script src="/js/send-form.js"></script>
 </body>
 </html>

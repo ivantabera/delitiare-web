@@ -227,6 +227,97 @@ nav .links {
   );
 }
 
+/* ===== Hero panel (lado derecho del header) ===== */
+
+.hero-panel .panel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-panel-content {
+  padding: 26px 26px 24px;
+  text-align: left;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Icono redondo */
+.hero-panel-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 184, 106, 0.45);
+  display: grid;
+  place-items: center;
+  margin-bottom: 6px;
+}
+
+/* Título */
+.hero-panel-title {
+  margin: 0;
+  font-size: clamp(20px, 2.1vw, 24px);
+}
+
+/* Bullets */
+.hero-panel-bullets {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.hero-panel-bullets li {
+  position: relative;
+  padding-left: 16px;
+  margin-top: 4px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.hero-panel-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--champagne);
+}
+
+/* Micro-animación tipo Apple */
+.hero-panel-bullets li:hover {
+  transform: translateX(2px);
+  opacity: 1;
+}
+
+/* CTA */
+.hero-panel-cta {
+  margin-top: 14px;
+}
+
+.hero-panel-cta .btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Ajustes en móvil: centrar todo */
+@media (max-width: 768px) {
+  .hero-panel-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-panel-bullets {
+    text-align: left;
+  }
+}
+
 /* Grid cards */
 .grid {
   display: grid;
