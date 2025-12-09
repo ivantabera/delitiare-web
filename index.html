@@ -422,42 +422,64 @@
     </div>
   </section> -->
 
-  <!-- Contacto -->
   <section id="contacto" class="section">
     <div class="container">
-      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 18px">Contacto</h2>
+      <h2 class="font-display gold-gradient" style="font-size: clamp(32px,4vw,56px); margin:0 0 18px">Concierge</h2>
       <div class="grid" style="grid-template-columns:1fr;gap:20px">
+        
         <div class="card reveal" style="padding:18px">
           <form id="form" class="reveal show">
+            
             <label style="display:grid;gap:6px;margin-bottom:10px">
-              <span>Correo electrónico</span>
-              <input required type="email" name="email" placeholder="tu@correo.com" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)" />
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Correo Corporativo o Personal</span>
+              <input required type="email" name="email" placeholder="ejecutivo@empresa.com" style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit;" />
             </label>
+
             <label style="display:grid;gap:6px;margin-bottom:10px">
-              <span>Alias</span>
-              <input required name="alias" placeholder="Cómo te llamamos" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)" />
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Alias (Para su privacidad)</span>
+              <input required name="alias" placeholder="Ej. Sr. Alejandro" style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit;" />
             </label>
+
             <label style="display:grid;gap:6px;margin-bottom:14px">
-              <span>Comentario</span>
-              <textarea required name="comentario" rows="4" placeholder="Cuéntanos qué buscas…" style="padding:12px 14px;border-radius:12px;background:#00000066;border:1px solid rgba(255,255,255,.12);color:var(--ivory)"></textarea>
+              <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">Requerimiento</span>
+              <textarea required name="comentario" rows="4" placeholder="Describa su necesidad de terapia o horario preferido..." style="padding:12px 14px;border-radius:2px;background:rgba(14, 15, 18, 0.6);border:1px solid rgba(214, 184, 106, 0.2);color:var(--ivory); font-family: inherit; resize: none;"></textarea>
             </label>
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-              <div style="display:flex;gap:14px;font-size:14px;opacity:.85">
-                <button type="button" id="open-privacy-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Aviso de privacidad</button>
-                <button type="button" id="open-terms-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer">Términos y condiciones</button>
+
+            <div id="form-message" style="display:none; margin-bottom: 10px; padding: 10px; font-size: 13px; border-radius: 4px;"></div>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap; margin-top: 10px;">
+              <div style="display:flex;gap:14px;font-size:11px;opacity:.6">
+                <button type="button" id="open-privacy-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer;color:inherit;text-decoration:underline;">Privacidad</button>
+                <button type="button" id="open-terms-2" class="priv-terms" style="background:none;border:0;padding:0;cursor:pointer;color:inherit;text-decoration:underline;">Términos</button>
               </div>
-              <button class="btn btn-solid" type="submit">Enviar</button>
+              <button class="btn btn-solid" type="submit" style="background-color: #d6b86a; color: #0e0f12; font-weight: 600; padding: 10px 24px; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;">Enviar Solicitud</button>
             </div>
           </form>
         </div>
-        <div class="card reveal" style="padding:18px">
-          <div style="display:grid;gap:8px">
-            <div>Tel: <span class="gold">+52 (33) 4287 4709</span></div>
-            <div>Correo: <a href="mailto:contacto@delitiare.mx" class="priv-terms">contacto@delitiare.mx</a></div>
-            <div>Ubicación: CDMX — Polanco</div>
-            <div style="opacity:.8;font-size:14px">Horario: Lun–Dom 09:00–22:00</div>
+
+        <div class="card reveal" style="padding:18px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="display:grid;gap:12px; font-size: 14px;">
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">Atención Telefónica</span>
+                <span class="gold" style="font-size:16px; color:#d6b86a;">+52 (33) 4287 4709</span>
+            </div>
+            
+            <div style="height: 1px; background: rgba(255,255,255,0.1);"></div>
+
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">Concierge Digital</span>
+                <a href="mailto:contacto@delitiare.mx" class="priv-terms" style="color:var(--ivory); text-decoration:none;">contacto@delitiare.mx</a>
+            </div>
+
+            <div style="height: 1px; background: rgba(255,255,255,0.1);"></div>
+
+            <div>
+                <span style="display:block; font-size:11px; text-transform:uppercase; color:var(--text-muted); margin-bottom:2px;">Ubicación Exclusiva</span>
+                <span style="color:var(--ivory);">Polanco & Lomas (Previa Reserva)</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>

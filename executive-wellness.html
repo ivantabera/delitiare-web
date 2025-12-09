@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17739710700"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17739710700');
+    </script>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Executive Wellness & Recovery CDMX | Delitiāre</title>
+    <meta
+      name="description"
+      content="Santuario de recuperación física y mental para el hombre de negocios. Terapias de manejo de estrés y desconexión ejecutiva en Polanco y Santa Fe."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://delitiare.mx/executive-wellness.html" />
+
+    <link rel="icon" href="./assets/icons/favicon.ico" sizes="any" />
+    
+    <meta property="og:title" content="Delitiāre: The Art of Executive Disconnection" />
+    <meta
+      property="og:description"
+      content="Espacio exclusivo de bienestar y recuperación para altos ejecutivos. Higiene clínica y privacidad absoluta."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://delitiare.mx/og-luxury.png" />
+    
+    <meta name="theme-color" content="#0e0f12" />
+
+    <style>
+      /* BRAND PALETTE - DELITIĀRE MANUAL 
+         Charcoal: #0e0f12 (Fondo Premium)
+         Champagne: #d6b86a (Lujo/Botones)
+         Ivory: #f6f3ee (Lectura)
+         Sage: #2a3a34 (Wellness/Salud)
+      */
+      :root {
+        --bg-color: #0e0f12; 
+        --card-bg: #15171c;
+        --accent: #d6b86a; 
+        --accent-soft: rgba(214, 184, 106, 0.15);
+        --text-main: #f6f3ee; 
+        --text-muted: #9fa1a6;
+        --wellness: #2a3a34; 
+        --border-soft: #2a2e37;
+        --radius-lg: 2px; /* Más cuadrado = Más serio/masculino */
+        --radius-pill: 999px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente clásica y seria */
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 600px;
+        /* Fondo Charcoal para profundidad y misterio */
+        background: radial-gradient(circle at top, #1c1f26 0, #0e0f12 60%);
+        border-radius: 4px;
+        padding: 32px 24px;
+        border: 1px solid rgba(214, 184, 106, 0.1); /* Sutil borde Champagne */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      }
+
+      @media (min-width: 720px) {
+        .card {
+          padding: 48px 48px;
+        }
+      }
+
+      /* TAG "WELLNESS" - Importante para Google */
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: var(--radius-pill);
+        background-color: var(--wellness); /* Sage Color = Salud */
+        color: #e8ecea;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+
+      h1 {
+        margin: 24px 0 12px;
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: var(--accent); /* Champagne */
+        font-weight: 300; /* Elegancia */
+      }
+
+      .subtitle {
+        margin: 0 0 24px;
+        font-size: 15px;
+        color: var(--text-muted);
+        font-weight: 300;
+      }
+
+      .divider {
+        height: 1px;
+        border: 0;
+        margin: 24px 0 28px;
+        background: linear-gradient(to right, transparent, var(--accent-soft), transparent);
+      }
+
+      .section-title {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .section {
+        margin-bottom: 32px;
+      }
+
+      .lead {
+        font-size: 15px;
+        color: var(--text-main);
+        opacity: 0.9;
+      }
+
+      .muted {
+        color: var(--text-muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .list {
+        display: grid;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .list li {
+        font-size: 14px;
+        color: var(--text-main);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Bullet points en Champagne */
+      .list li::before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        background: var(--accent);
+        display: block;
+        transform: rotate(45deg); /* Rombo = Lujo */
+      }
+
+      .cta-wrapper {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 16px 24px;
+        border-radius: 2px;
+        background: var(--accent); /* Botón Champagne sólido */
+        color: #0e0f12; /* Texto oscuro para contraste */
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .btn-whatsapp:hover {
+        background: #e5cfa0;
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(214, 184, 106, 0.2);
+      }
+
+      .badge-zonas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .badge {
+        padding: 6px 12px;
+        border: 1px solid var(--border-soft);
+        font-size: 11px;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      /* DISCLAIMER LEGAL - CRÍTICO PARA ADS */
+      .legal-footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        text-align: center;
+      }
+      
+      .legal-text {
+        font-size: 10px;
+        color: #4a4d55;
+        max-width: 400px;
+        margin: 0 auto;
+        line-height: 1.4;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        
+        <div class="eyebrow">
+          <span>Executive Wellness & Recovery</span>
+        </div>
+
+        <h1>Delitiāre Private Suites</h1>
+        <p class="subtitle">
+          El arte de la desconexión ejecutiva en CDMX.
+        </p>
+
+        <hr class="divider" />
+
+        <section class="section">
+          <p class="lead">
+            Un santuario exclusivo diseñado para combatir el <strong>burnout corporativo</strong>. 
+            Protocolos de higiene clínica y terapias manuales de alta categoría para recuperar su rendimiento físico y mental.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Menú Terapéutico</h2>
+          <ul class="list">
+            <li>Terapia de Desconexión Mental (Anti-Estrés)</li>
+            <li>Recuperación Muscular Profunda (Deep Tissue)</li>
+            <li>Wellness Ejecutivo & Aromaterapia</li>
+            <li>Privacidad & Discreción Garantizada</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Cobertura Premium</h2>
+          <p class="muted">
+            Atención en suites privadas (Anzures/Polanco) o servicio <em>In-House</em> a domicilio/hotel bajo estricta reserva.
+          </p>
+          <div class="badge-zonas">
+            <span class="badge">Polanco</span>
+            <span class="badge">Santa Fe</span>
+            <span class="badge">Lomas</span>
+            <span class="badge">Reforma</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Estándares Delitiāre</h2>
+          <p class="muted">
+            Nuestros especialistas están certificados en fisiología y bienestar. 
+            Priorizamos la higiene absoluta, la ética profesional y un ambiente libre de juicios.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="cta-wrapper">
+            <a
+              class="btn-whatsapp"
+              href="https://wa.me/523342874709?text=Hola%20Delitiāre,%20deseo%20consultar%20disponibilidad%20para%20una%20sesión%20de%20bienestar%20ejecutivo."
+              target="_blank"
+            >
+              Solicitar Disponibilidad
+            </a>
+            <p class="muted" style="font-size: 11px; margin-top:0;">
+              Atención personalizada vía WhatsApp Concierge.
+            </p>
+          </div>
+        </section>
+
+        <footer class="legal-footer">
+            <p class="legal-text">
+                <strong>AVISO LEGAL:</strong> Delitiāre ofrece servicios estrictamente terapéuticos de relajación y bienestar. 
+                No ofrecemos servicios de naturaleza sexual, compañía, ni prácticas al margen de la ética profesional. 
+                Nos reservamos el derecho de admisión.
+            </p>
+        </footer>
+
+      </section>
+    </main>
+  </body>
+</html>
