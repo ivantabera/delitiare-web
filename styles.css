@@ -816,3 +816,41 @@ summary.faq-question::-webkit-details-marker {
 .faq-cta .btn {
   font-size: 13px;
 }
+
+/* --- NUEVO CSS PARA TARJETAS GRANDES --- */
+
+/* Por defecto en móvil: 1 columna grande */
+.specialist-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr; 
+}
+
+/* En Tablet: 2 columnas */
+@media (min-width: 600px) {
+  .specialist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* En Desktop: 3 columnas (esto las hace mucho más grandes que 4) */
+@media (min-width: 1024px) {
+  .specialist-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px; /* Más espacio entre tarjetas */
+  }
+}
+
+/* Efecto Hover para darle sensación premium */
+.specialist-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.specialist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 184, 106, 0.12),
+    rgba(214, 184, 106, 0.04)
+  ) !important; /* Brillo dorado sutil al pasar el mouse */
+}
